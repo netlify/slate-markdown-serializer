@@ -186,7 +186,7 @@ class Markdown {
    */
   deserialize(markdown) {
     const nodes = markdownparser.parse(markdown)
-    const state = Raw.deserialize(nodes)
+    const state = Raw.deserialize(nodes, { terse: true })
     return state
   }
 
