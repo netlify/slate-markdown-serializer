@@ -14,7 +14,7 @@
   },
   "peerDependencies": {
     "immutable": "^3.8.1",
-    "slate": "^0.6.7"
+    "slate": "^0.10.0"
   },
   "devDependencies": {
     "rollup": "^0.34.2",
