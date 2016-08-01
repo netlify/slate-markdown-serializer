@@ -1,4 +1,7 @@
+import markdownparser from './markdownparser'
+import { Raw } from 'slate'
 import { Record } from 'immutable'
+
 
 /**
  * String.
@@ -10,19 +13,69 @@ const String = new Record({
 })
 
 /**
- * A rule to (de)serialize text nodes. This is automatically added to the HTML
- * serializer so that users don't have to worry about text-level serialization.
+ * Rules to (de)serialize nodes.
  *
  * @type {Object}
  */
 
-const TEXT_RULE = {
-  serialize(obj, children) {
-    if (obj.kind == 'string') {
-      return children
+const RULES = [
+  {
+    serialize(obj, children) {
+      if (obj.kind == 'string') {
+        return children
+      }
+    }
+  },
+  {
+    serialize(obj, children) {
+      if (obj.kind != 'block') return
+
+      switch (obj.type) {
+        case 'paragraph': return `\n${children}\n`
+        case 'block-quote': return `> ${children}\n`
+        case 'bulleted-list': return children
+        case 'list-item': return `* ${children}\n`
+        case 'heading1': return `# ${children}`
+        case 'heading2': return `## ${children}`
+        case 'heading3': return `### ${children}`
+        case 'heading4': return `#### ${children}`
+        case 'heading5': return `##### ${children}`
+        case 'heading6': return `###### ${children}`
+        case 'heading6': return `###### ${children}`
+        case 'horizontal-rule': return `---`
+        case 'image':
+          let title = obj.getIn(['data','title']);
+          let src = obj.getIn(['data','src']);
+          let alt = obj.getIn(['data','alt']);
+          return `![${title}](${src} "${alt}")`
+      }
+    }
+  },
+  {
+    serialize(obj, children) {
+      if (obj.kind != 'inline') return
+
+      switch (obj.type) {
+        case 'link': return `[${obj.getIn(['data','href'])}](${children})`
+      }
+    }
+  },
+  // Add a new rule that handles marks...
+  {
+    serialize(obj, children) {
+      if (obj.kind != 'mark') return
+      switch (obj.type) {
+        case 'bold': return `**${children}**`
+        case 'italic': return `*${children}*`
+        case 'code': return `\`${children}\``
+        case 'inserted': return `__${children}__`
+        case 'deleted': return `~~${children}~~`
+
+      }
     }
   }
-}
+]
+
 
 
 /**
@@ -44,7 +97,7 @@ class Markdown {
   constructor(options = {}) {
     this.rules = [
       ...(options.rules || []),
-      TEXT_RULE
+      ...RULES
     ];
 
     this.serializeNode = this.serializeNode.bind(this);
@@ -124,6 +177,19 @@ class Markdown {
       if (ret) return ret
     }
   }
+
+  /**
+   * Deserialize a markdown `string`.
+   *
+   * @param {String} markdown
+   * @return {State} state
+   */
+  deserialize(markdown) {
+    const nodes = markdownparser.parse(markdown)
+    const state = Raw.deserialize(nodes)
+    return state
+  }
+
 
 }
 

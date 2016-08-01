@@ -2,9 +2,9 @@
   "name": "slate-markdown-serializer",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-
+    "build": "rollup -c"
   },
   "author": "",
   "license": "MIT",
@@ -12,7 +12,13 @@
     "type": "git",
     "url": "git://github.com/netlify/slate-markdown-serializer.git"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "immutable": "^3.8.1",
     "slate": "^0.6.7"
+  },
+  "devDependencies": {
+    "rollup": "^0.34.2",
+    "rollup-plugin-babel": "^2.6.1",
+    "babel-preset-es2015-rollup": "^1.1.1"
   }
 }
