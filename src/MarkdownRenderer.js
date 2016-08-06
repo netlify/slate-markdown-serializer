@@ -54,9 +54,8 @@ const RULES = [
   {
     serialize(obj, children) {
       if (obj.kind != 'inline') return
-
       switch (obj.type) {
-        case 'link': return `[${obj.getIn(['data','href'])}](${children})`
+        case 'link': return `[${children}](${obj.getIn(['data','href'])})`
       }
     }
   },
