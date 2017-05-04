@@ -2,4 +2,4 @@
 
 # Slate Markdown Serializer
 
-A Markdown serializer for slate (https://github.com/ianstormtaylor/slate/tree/master).
+A Markdown serializer for the [Slate Editor](http://slatejs.org).
