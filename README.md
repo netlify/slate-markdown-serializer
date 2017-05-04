@@ -1,3 +1,5 @@
-# Slate editor markdown serializer
+[![CircleCI](https://circleci.com/gh/tommoor/slate-markdown-serializer.svg?style=svg)](https://circleci.com/gh/tommoor/slate-markdown-serializer)
 
-Experimental Markdown serializer for slate (https://github.com/ianstormtaylor/slate/tree/master).
+# Slate Markdown Serializer
+
+A Markdown serializer for slate (https://github.com/ianstormtaylor/slate/tree/master).
