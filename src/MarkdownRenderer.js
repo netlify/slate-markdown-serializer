@@ -34,7 +34,7 @@ const RULES = [
         case 'paragraph': return `\n${children}\n`
         case 'block-quote': return `> ${children}\n`
         case 'bulleted-list': return children
-        case 'list-item': return `* ${children}\n`
+        case 'list-item': return `* ${children.trim()}\n`
         case 'heading1': return `# ${children}`
         case 'heading2': return `## ${children}`
         case 'heading3': return `### ${children}`
@@ -55,7 +55,7 @@ const RULES = [
     serialize(obj, children) {
       if (obj.kind != 'inline') return
       switch (obj.type) {
-        case 'link': return `[${children}](${obj.getIn(['data','href'])})`
+        case 'link': return `[${children.trim()}](${obj.getIn(['data','href'])})`
       }
     }
   },
@@ -188,8 +188,6 @@ class Markdown {
     const state = Raw.deserialize(nodes, { terse: true })
     return state
   }
-
-
 }
 
 /**

@@ -1,0 +1,677 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses heading1 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "1",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "0",
+      },
+    ],
+    "type": "heading1",
+  },
+]
+`;
+
+exports[`parses heading2 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "4",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "3",
+      },
+    ],
+    "type": "heading2",
+  },
+]
+`;
+
+exports[`parses heading3 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "7",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "6",
+      },
+    ],
+    "type": "heading3",
+  },
+]
+`;
+
+exports[`parses heading4 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "10",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "9",
+      },
+    ],
+    "type": "heading4",
+  },
+]
+`;
+
+exports[`parses heading5 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "13",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "12",
+      },
+    ],
+    "type": "heading5",
+  },
+]
+`;
+
+exports[`parses heading6 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "16",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "15",
+      },
+    ],
+    "type": "heading6",
+  },
+]
+`;
+
+exports[`parses list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "28",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "25",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "24",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "27",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "26",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "34",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "31",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "b",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "d",
+              },
+            ],
+            "key": "30",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "33",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "32",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses quote 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "19",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "h",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "q",
+          },
+          Object {
+            "marks": Array [],
+            "text": "u",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+        ],
+        "key": "18",
+      },
+    ],
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`parses quote with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "22",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "type": "bold",
+              },
+            ],
+            "text": "b",
+          },
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "type": "bold",
+              },
+            ],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "type": "bold",
+              },
+            ],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "type": "bold",
+              },
+            ],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "q",
+          },
+          Object {
+            "marks": Array [],
+            "text": "u",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+        ],
+        "key": "21",
+      },
+    ],
+    "type": "block-quote",
+  },
+]
+`;
