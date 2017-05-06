@@ -1072,7 +1072,9 @@ Array [
         "key": "68",
         "nodes": Array [
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": null,
+            },
             "isVoid": false,
             "key": "63",
             "nodes": Array [
@@ -1106,10 +1108,12 @@ Array [
                 "key": "62",
               },
             ],
-            "type": "table-cell",
+            "type": "table-head",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "center",
+            },
             "isVoid": false,
             "key": "65",
             "nodes": Array [
@@ -1131,10 +1135,12 @@ Array [
                 "key": "64",
               },
             ],
-            "type": "table-cell",
+            "type": "table-head",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "right",
+            },
             "isVoid": false,
             "key": "67",
             "nodes": Array [
@@ -1160,7 +1166,7 @@ Array [
                 "key": "66",
               },
             ],
-            "type": "table-cell",
+            "type": "table-head",
           },
         ],
         "type": "table-row",
@@ -1171,7 +1177,9 @@ Array [
         "key": "75",
         "nodes": Array [
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": null,
+            },
             "isVoid": false,
             "key": "70",
             "nodes": Array [
@@ -1216,7 +1224,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "center",
+            },
             "isVoid": false,
             "key": "72",
             "nodes": Array [
@@ -1277,7 +1287,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "right",
+            },
             "isVoid": false,
             "key": "74",
             "nodes": Array [
@@ -1318,7 +1330,9 @@ Array [
         "key": "82",
         "nodes": Array [
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": null,
+            },
             "isVoid": false,
             "key": "77",
             "nodes": Array [
@@ -1363,7 +1377,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "center",
+            },
             "isVoid": false,
             "key": "79",
             "nodes": Array [
@@ -1408,7 +1424,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "right",
+            },
             "isVoid": false,
             "key": "81",
             "nodes": Array [
@@ -1441,7 +1459,9 @@ Array [
         "key": "89",
         "nodes": Array [
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": null,
+            },
             "isVoid": false,
             "key": "84",
             "nodes": Array [
@@ -1486,7 +1506,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "center",
+            },
             "isVoid": false,
             "key": "86",
             "nodes": Array [
@@ -1551,7 +1573,9 @@ Array [
             "type": "table-cell",
           },
           Object {
-            "data": Object {},
+            "data": Object {
+              "align": "right",
+            },
             "isVoid": false,
             "key": "88",
             "nodes": Array [
