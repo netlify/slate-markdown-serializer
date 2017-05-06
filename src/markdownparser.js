@@ -705,7 +705,7 @@ Renderer.prototype.hr = function() {
 };
 
 Renderer.prototype.list = function(childNode, isOrdered) {
-  var type = isOrdered ? "numbered-list" : "bulleted-list";
+  var type = isOrdered ? "ordered-list" : "bulleted-list";
   return {
     kind: "block",
     type: type,

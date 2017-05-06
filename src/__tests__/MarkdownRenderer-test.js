@@ -49,6 +49,15 @@ test("parses quote with marks", () => {
 
 test("parses list items", () => {
   const text = `
+- one
+- two
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses indented list items", () => {
+  const text = `
  - one
  - two
 `;
@@ -60,6 +69,34 @@ test("parses list items with marks", () => {
   const text = `
  - one **bold**
  - *italic* two
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses ordered list items", () => {
+  const text = `
+1. one
+1. two
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses ordered list items with marks", () => {
+  const text = `
+1. one **bold**
+1. *italic* two
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses ordered list items with different numbers", () => {
+  const text = `
+1. one
+2. two
+3. three
 `;
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();

@@ -276,6 +276,69 @@ Array [
 ]
 `;
 
+exports[`parses indented list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "34",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "31",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "30",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "33",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "32",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
 exports[`parses list items 1`] = `
 Array [
   Object {
@@ -344,12 +407,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "34",
+    "key": "40",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "31",
+        "key": "37",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -406,7 +469,7 @@ Array [
                 "text": "d",
               },
             ],
-            "key": "30",
+            "key": "36",
           },
         ],
         "type": "list-item",
@@ -414,7 +477,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "33",
+        "key": "39",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -489,13 +552,333 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "32",
+            "key": "38",
           },
         ],
         "type": "list-item",
       },
     ],
     "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses ordered list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "46",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "43",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "42",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "45",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "44",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with different numbers 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "60",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "55",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "54",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "57",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "56",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "59",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "h",
+              },
+              Object {
+                "marks": Array [],
+                "text": "r",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "58",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "52",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "49",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "b",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "d",
+              },
+            ],
+            "key": "48",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "51",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "italic",
+                  },
+                ],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "50",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
   },
 ]
 `;
