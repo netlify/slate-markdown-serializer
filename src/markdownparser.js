@@ -827,12 +827,12 @@ Renderer.prototype.tablerow = function(childNode) {
 };
 
 Renderer.prototype.tablecell = function(childNode, flags) {
-  const type = flags.header ? "th" : "td";
-  const tag = flags.align;
+  const align = flags.align;
 
   return {
     kind: "block",
-    type: "table-cell",
+    data: { align },
+    type: flags.header ? "table-head" : "table-cell",
     nodes: this.groupTextInRanges(childNode)
   };
 };
