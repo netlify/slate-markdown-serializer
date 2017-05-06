@@ -4,6 +4,13 @@
 
 A Markdown serializer for the [Slate Editor](http://slatejs.org).
 
+## TODO
+
+- [ ] Support serialization of tables > md
+- [ ] Support serialization of ordered lists > md
+- [ ] Support code fences
+
+
 ## Schema
 
 This module expects your Slate schema to have the following keys (example implementations included):
