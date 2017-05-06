@@ -1058,3 +1058,524 @@ Array [
   },
 ]
 `;
+
+exports[`parses tables 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "90",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "68",
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "63",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "T",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "a",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "b",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "s",
+                  },
+                ],
+                "key": "62",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "65",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "A",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "r",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                ],
+                "key": "64",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "67",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "C",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                ],
+                "key": "66",
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "75",
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "70",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "1",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "s",
+                  },
+                ],
+                "key": "69",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "72",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "f",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "-",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "a",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "g",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "n",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "d",
+                  },
+                ],
+                "key": "71",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "74",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "$",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "1",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "6",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "0",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "0",
+                  },
+                ],
+                "key": "73",
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "82",
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "77",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "2",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "s",
+                  },
+                ],
+                "key": "76",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "79",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "n",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "r",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "d",
+                  },
+                ],
+                "key": "78",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "81",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "$",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "1",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "2",
+                  },
+                ],
+                "key": "80",
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "89",
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "84",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "3",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "s",
+                  },
+                ],
+                "key": "83",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "86",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "r",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "g",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "h",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "-",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "a",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "g",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "n",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "d",
+                  },
+                ],
+                "key": "85",
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "88",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "$",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "1",
+                  },
+                ],
+                "key": "87",
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+    ],
+    "type": "table",
+  },
+]
+`;

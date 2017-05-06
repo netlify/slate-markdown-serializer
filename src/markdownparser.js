@@ -33,6 +33,7 @@ noop.exec = noop;
 
 var defaults = {
   gfm: true,
+  tables: true,
   breaks: false,
   pedantic: false,
   smartLists: false,
@@ -105,6 +106,15 @@ block.gfm.paragraph = replace(block.paragraph)(
 )();
 
 /**
+ * GFM + Tables Block Grammar
+ */
+
+block.tables = assign({}, block.gfm, {
+  nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
+  table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/
+});
+
+/**
  * Block Lexer
  */
 
@@ -115,7 +125,11 @@ function Lexer(options) {
   this.rules = block.normal;
 
   if (this.options.gfm) {
-    this.rules = block.gfm;
+    if (this.options.tables) {
+      this.rules = block.tables;
+    } else {
+      this.rules = block.gfm;
+    }
   }
 }
 
@@ -206,6 +220,38 @@ Lexer.prototype.token = function(src, top, bq) {
         depth: cap[1].length,
         text: cap[2]
       });
+      continue;
+    }
+
+    // table no leading pipe (gfm)
+    if (top && (cap = this.rules.nptable.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: "table",
+        header: cap[1].replace(/^ *| *\| *$/g, "").split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, "").split(/ *\| */),
+        cells: cap[3].replace(/\n$/, "").split("\n")
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = "right";
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = "center";
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = "left";
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i].split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
       continue;
     }
 
@@ -332,6 +378,40 @@ Lexer.prototype.token = function(src, top, bq) {
         href: cap[2],
         title: cap[3]
       };
+      continue;
+    }
+
+    // table (gfm)
+    if (top && (cap = this.rules.table.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: "table",
+        header: cap[1].replace(/^ *| *\| *$/g, "").split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, "").split(/ *\| */),
+        cells: cap[3].replace(/(?: *\| *)?\n$/, "").split("\n")
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = "right";
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = "center";
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = "left";
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i]
+          .replace(/^ *\| *| *\| *$/g, "")
+          .split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
       continue;
     }
 
@@ -705,7 +785,8 @@ Renderer.prototype.hr = function() {
 };
 
 Renderer.prototype.list = function(childNode, isOrdered) {
-  var type = isOrdered ? "ordered-list" : "bulleted-list";
+  const type = isOrdered ? "ordered-list" : "bulleted-list";
+
   return {
     kind: "block",
     type: type,
@@ -725,6 +806,33 @@ Renderer.prototype.paragraph = function(childNode) {
   return {
     kind: "block",
     type: "paragraph",
+    nodes: this.groupTextInRanges(childNode)
+  };
+};
+
+Renderer.prototype.table = function(childNode) {
+  return {
+    kind: "block",
+    type: "table",
+    nodes: childNode
+  };
+};
+
+Renderer.prototype.tablerow = function(childNode) {
+  return {
+    kind: "block",
+    type: "table-row",
+    nodes: childNode
+  };
+};
+
+Renderer.prototype.tablecell = function(childNode, flags) {
+  const type = flags.header ? "th" : "td";
+  const tag = flags.align;
+
+  return {
+    kind: "block",
+    type: "table-cell",
     nodes: this.groupTextInRanges(childNode)
   };
 };
@@ -936,6 +1044,40 @@ Parser.prototype.tok = function() {
     }
     case "code": {
       return this.renderer.code(this.token.text, this.token.lang);
+    }
+    case "table": {
+      let body = [];
+      let i, row, flags, j;
+
+      // header
+      let cells = [];
+      for (i = 0; i < this.token.header.length; i++) {
+        flags = { header: true, align: this.token.align[i] };
+        cells.push(
+          this.renderer.tablecell(this.inline.parse(this.token.header[i]), {
+            header: true,
+            align: this.token.align[i]
+          })
+        );
+      }
+      body.push(this.renderer.tablerow(cells));
+
+      for (i = 0; i < this.token.cells.length; i++) {
+        row = this.token.cells[i];
+
+        let cells = [];
+        for (j = 0; j < row.length; j++) {
+          cells.push(
+            this.renderer.tablecell(this.inline.parse(row[j]), {
+              header: false,
+              align: this.token.align[j]
+            })
+          );
+        }
+
+        body.push(this.renderer.tablerow(cells));
+      }
+      return this.renderer.table(body);
     }
     case "blockquote_start": {
       let body = [];

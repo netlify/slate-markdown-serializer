@@ -101,3 +101,16 @@ test("parses ordered list items with different numbers", () => {
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
 });
+
+test("parses tables", () => {
+  const text = `
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+`;
+
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
