@@ -36,6 +36,8 @@ const RULES = [
           return `> ${children}\n`;
         case "bulleted-list":
           return children;
+        case "ordered-list":
+          return children.replace(/^\*/gim, "1\.");
         case "list-item":
           return `* ${children.trim()}\n`;
         case "heading1":
