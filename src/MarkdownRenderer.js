@@ -55,7 +55,7 @@ const RULES = [
         case "heading6":
           return `###### ${children}`;
         case "horizontal-rule":
-          return `---`;
+          return `---\n`;
         case "image":
           let title = obj.getIn(["data", "title"]);
           let src = obj.getIn(["data", "src"]);
