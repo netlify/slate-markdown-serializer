@@ -1603,3 +1603,213 @@ Array [
   },
 ]
 `;
+
+exports[`parses todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "96",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "key": "93",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "d",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "92",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "key": "95",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "d",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "94",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses todo list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "102",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "key": "99",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "deleted",
+                  },
+                ],
+                "text": "d",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "deleted",
+                  },
+                ],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "deleted",
+                  },
+                ],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "deleted",
+                  },
+                ],
+                "text": "e",
+              },
+            ],
+            "key": "98",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "key": "101",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "m",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "r",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "d",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "type": "bold",
+                  },
+                ],
+                "text": "e",
+              },
+            ],
+            "key": "100",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
+  },
+]
+`;

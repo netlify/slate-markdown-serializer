@@ -5,7 +5,6 @@
  *   Use ES6 classes
  *   Add flow annotations
  */
-/* eslint-disable no-spaced-func */
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -61,7 +60,7 @@ var block = {
   text: /^[^\n]+/
 };
 
-block.bullet = /(?:[*+-]|\d+\.)/;
+block.bullet = /(?:[*+-]|\d+\.|\[[x\s]\])/;
 block.item = /^( *)(bull) [^\n]*(?:\n(?!\1bull )[^\n]*)*/;
 block.item = replace(block.item, "gm")(/bull/g, block.bullet)();
 
@@ -301,10 +300,12 @@ Lexer.prototype.token = function(src, top, bq) {
     if ((cap = this.rules.list.exec(src))) {
       src = src.substring(cap[0].length);
       bull = cap[2];
+      let ordered = bull.length > 1;
+      let todo = bull[0] === "[";
 
       this.tokens.push({
         type: "list_start",
-        ordered: bull.length > 1
+        style: todo ? "todo" : ordered ? "ordered" : "bulleted"
       });
 
       // Get each top-level item.
@@ -319,8 +320,9 @@ Lexer.prototype.token = function(src, top, bq) {
 
         // Remove the list item's bullet
         // so it is seen as the next token.
+        let checked = todo ? !!item.match(/^ *(\[x\])/) : undefined;
         space = item.length;
-        item = item.replace(/^ *([*+-]|\d+\.) +/, "");
+        item = item.replace(/^ *([*+-]|\d+\.|\[[x\s]\]) +/, "");
 
         // Outdent whatever the
         // list item contains. Hacky.
@@ -353,6 +355,7 @@ Lexer.prototype.token = function(src, top, bq) {
         }
 
         this.tokens.push({
+          checked,
           type: loose ? "loose_item_start" : "list_item_start"
         });
 
@@ -784,20 +787,23 @@ Renderer.prototype.hr = function() {
   };
 };
 
-Renderer.prototype.list = function(childNode, isOrdered) {
-  const type = isOrdered ? "ordered-list" : "bulleted-list";
-
+Renderer.prototype.list = function(childNode, style) {
   return {
     kind: "block",
-    type: type,
+    type: `${style}-list`,
     nodes: this.groupTextInRanges(childNode)
   };
 };
 
-Renderer.prototype.listitem = function(childNode) {
+Renderer.prototype.listitem = function(childNode, flags = {}) {
+  let data;
+  if (flags.checked !== undefined) {
+    data = { checked: flags.checked };
+  }
   return {
     kind: "block",
     type: "list-item",
+    data,
     nodes: this.groupTextInRanges(childNode)
   };
 };
@@ -1089,22 +1095,23 @@ Parser.prototype.tok = function() {
     }
     case "list_start": {
       let body = [];
-      var ordered = this.token.ordered;
+      let style = this.token.style;
 
       while (this.next().type !== "list_end") {
         body.push(this.tok());
       }
 
-      return this.renderer.list(body, ordered);
+      return this.renderer.list(body, style);
     }
     case "list_item_start": {
       let body = [];
+      let flags = { checked: this.token.checked };
 
       while (this.next().type !== "list_item_end") {
         body.push(this.token.type === "text" ? this.parseText() : this.tok());
       }
 
-      return this.renderer.listitem(body);
+      return this.renderer.listitem(body, flags);
     }
     case "loose_item_start": {
       let body = [];

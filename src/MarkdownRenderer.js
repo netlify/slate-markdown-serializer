@@ -34,12 +34,21 @@ const RULES = [
           return `\n${children}\n`;
         case "block-quote":
           return `> ${children}\n`;
+        case "todo-list":
+          return children;
         case "bulleted-list":
           return children;
         case "ordered-list":
           return children.replace(/^\*/gim, "1\.");
-        case "list-item":
-          return `* ${children.trim()}\n`;
+        case "list-item": {
+          let checked = obj.getIn(["data", "checked"]);
+          if (checked !== undefined) {
+            let box = checked ? "[x]" : "[ ]";
+            return `${box} ${children.trim()}\n`;
+          } else {
+            return `* ${children.trim()}\n`;
+          }
+        }
         case "heading1":
           return `# ${children}`;
         case "heading2":

@@ -30,6 +30,7 @@ This module expects your Slate schema to have the following keys (example implem
     'horizontal-rule': props => <hr />,
     'bulleted-list': props => <ul>{props.children}</ul>,
     'ordered-list': props => <ol>{props.children}</ol>,
+    'todo-list': props => <ul>{props.children}</ul>,
     'list-item': props => <li>{props.children}</li>,
     image: props => <img src={props.src} title={props.title} />,
     link: props => <a href={props.href}>{props.children}</a>,

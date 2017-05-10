@@ -114,3 +114,21 @@ test("parses tables", () => {
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
 });
+
+test("parses todo list items", () => {
+  const text = `
+[ ] todo
+[x] done
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses todo list items with marks", () => {
+  const text = `
+ [x] ~~done~~
+ [x] more **done**
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
