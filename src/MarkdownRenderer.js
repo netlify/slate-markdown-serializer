@@ -26,27 +26,30 @@ const RULES = [
     }
   },
   {
-    serialize(obj, children) {
+    serialize(obj, children, document) {
       if (obj.kind != "block") return;
-
       switch (obj.type) {
         case "paragraph":
           return `\n${children}\n`;
         case "block-quote":
           return `> ${children}\n`;
         case "todo-list":
-          return children;
         case "bulleted-list":
-          return children;
         case "ordered-list":
-          return children.replace(/^\*/gim, "1\.");
+          return children.replace(/^/gm, "   ");
         case "list-item": {
-          let checked = obj.getIn(["data", "checked"]);
-          if (checked !== undefined) {
-            let box = checked ? "[x]" : "[ ]";
-            return `${box} ${children.trim()}\n`;
-          } else {
-            return `* ${children.trim()}\n`;
+          let parent = document.getParent(obj.key);
+
+          switch (parent.type) {
+            case "ordered-list":
+              return `1. ${children.trim()}\n`;
+            case "todo-list":
+              let checked = obj.getIn(["data", "checked"]);
+              let box = checked ? "[x]" : "[ ]";
+              return `${box} ${children.trim()}\n`;
+            default:
+            case "bulleted-list":
+              return `* ${children.trim()}\n`;
           }
         }
         case "heading1":
@@ -134,7 +137,9 @@ class Markdown {
 
   serialize(state) {
     const { document } = state;
-    const elements = document.nodes.map(this.serializeNode);
+    const elements = document.nodes.map(node =>
+      this.serializeNode(node, document)
+    );
 
     return elements.join("\n").trim();
   }
@@ -146,20 +151,20 @@ class Markdown {
    * @return {String}
    */
 
-  serializeNode(node) {
+  serializeNode(node, document) {
     if (node.kind == "text") {
       const ranges = node.getRanges();
       return ranges.map(this.serializeRange);
     }
 
-    let children = node.nodes.map(this.serializeNode);
+    let children = node.nodes.map(node => this.serializeNode(node, document));
     children = children.flatten().length === 0
       ? ""
       : children.flatten().join("");
 
     for (const rule of this.rules) {
       if (!rule.serialize) continue;
-      const ret = rule.serialize(node, children);
+      const ret = rule.serialize(node, children, document);
       if (ret) return ret;
     }
   }
