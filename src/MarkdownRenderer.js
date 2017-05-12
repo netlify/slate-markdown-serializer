@@ -28,28 +28,32 @@ const RULES = [
   {
     serialize(obj, children, document) {
       if (obj.kind != "block") return;
+      let parent = document.getParent(obj.key);
+
       switch (obj.type) {
         case "paragraph":
-          return `\n${children}\n`;
+          if (parent.type === "list-item") {
+            return children;
+          } else {
+            return `\n${children}\n`;
+          }
         case "block-quote":
           return `> ${children}\n`;
         case "todo-list":
         case "bulleted-list":
         case "ordered-list":
-          return children.replace(/^/gm, "   ");
+          return `\n${children.replace(/^/gm, "   ")}`;
         case "list-item": {
-          let parent = document.getParent(obj.key);
-
           switch (parent.type) {
             case "ordered-list":
-              return `1. ${children.trim()}\n`;
+              return `1. ${children}\n`;
             case "todo-list":
               let checked = obj.getIn(["data", "checked"]);
               let box = checked ? "[x]" : "[ ]";
-              return `${box} ${children.trim()}\n`;
+              return `${box} ${children}\n`;
             default:
             case "bulleted-list":
-              return `* ${children.trim()}\n`;
+              return `* ${children}\n`;
           }
         }
         case "heading1":
