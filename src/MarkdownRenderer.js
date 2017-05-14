@@ -42,6 +42,9 @@ const RULES = [
         case "todo-list":
         case "bulleted-list":
         case "ordered-list":
+          if (parent === document) {
+            return children;
+          }
           return `\n${children.replace(/^/gm, "   ")}`;
         case "list-item": {
           switch (parent.type) {
@@ -73,10 +76,9 @@ const RULES = [
         case "horizontal-rule":
           return `---\n`;
         case "image":
-          let title = obj.getIn(["data", "title"]);
-          let src = obj.getIn(["data", "src"]);
           let alt = obj.getIn(["data", "alt"]);
-          return `![${title}](${src} "${alt}")`;
+          let src = obj.getIn(["data", "src"]);
+          return `![${alt}](${src})`;
       }
     }
   },
