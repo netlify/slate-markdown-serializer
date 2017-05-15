@@ -176,3 +176,25 @@ test("parses indented code blocks", () => {
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
 });
+
+test("parses link", () => {
+  const text = `[google](http://google.com)`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses link within mark", () => {
+  const text = `**[google](http://google.com)**`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses interesting nesting", () => {
+  const text = `
+* List item that contains a blockquote with inline mark
+
+  >Blockquote with code \`mapStateToProps()\`
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});

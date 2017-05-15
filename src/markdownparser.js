@@ -785,6 +785,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
   if (flags.checked !== undefined) {
     data = { checked: flags.checked };
   }
+
   return {
     kind: "block",
     type: "list-item",
@@ -856,9 +857,7 @@ Renderer.prototype.codespan = function(text) {
 };
 
 Renderer.prototype.br = function() {
-  return {
-    text: "--"
-  };
+  return new TextNode("");
 };
 
 Renderer.prototype.del = function(childNode) {
@@ -1105,9 +1104,8 @@ Parser.prototype.tok = function() {
       let body = [];
 
       while (this.next().type !== "list_item_end") {
-        body.push(this.tok());
+        body.push(this.token.type === "text" ? this.parseText() : this.tok());
       }
-
       return this.renderer.listitem(body);
     }
     case "paragraph": {

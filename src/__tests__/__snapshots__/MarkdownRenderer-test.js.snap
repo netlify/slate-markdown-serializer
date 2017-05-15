@@ -1038,6 +1038,614 @@ Array [
 ]
 `;
 
+exports[`parses interesting nesting 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "136",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "135",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "L",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "s",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": "m",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "h",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "s",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "b",
+              },
+              Object {
+                "marks": Array [],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": "k",
+              },
+              Object {
+                "marks": Array [],
+                "text": "q",
+              },
+              Object {
+                "marks": Array [],
+                "text": "u",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "h",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": " ",
+              },
+              Object {
+                "marks": Array [],
+                "text": "m",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [],
+                "text": "r",
+              },
+              Object {
+                "marks": Array [],
+                "text": "k",
+              },
+            ],
+            "key": "131",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "134",
+            "nodes": Array [
+              Object {
+                "characters": Array [
+                  Object {
+                    "marks": Array [],
+                    "text": "B",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "l",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "k",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "q",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "u",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "w",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "i",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "h",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "c",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "d",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "text": " ",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "m",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "a",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "p",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "S",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "a",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "t",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "e",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "T",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "P",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "r",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "o",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "p",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "s",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": "(",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "type": "code",
+                      },
+                    ],
+                    "text": ")",
+                  },
+                ],
+                "key": "133",
+              },
+            ],
+            "type": "block-quote",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses link 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "121",
+    "nodes": Array [
+      Object {
+        "characters": Array [],
+        "key": "123",
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "key": "120",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "g",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "g",
+              },
+              Object {
+                "marks": Array [],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "119",
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "characters": Array [],
+        "key": "124",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link within mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "127",
+    "nodes": Array [
+      Object {
+        "characters": Array [],
+        "key": "129",
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "key": "126",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "g",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "g",
+              },
+              Object {
+                "marks": Array [],
+                "text": "l",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "125",
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "characters": Array [],
+        "key": "130",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses list items 1`] = `
 Array [
   Object {
