@@ -20,14 +20,14 @@ const String = new Record({
 const RULES = [
   {
     serialize(obj, children) {
-      if (obj.kind == "string") {
+      if (obj.kind === "string") {
         return children;
       }
     }
   },
   {
     serialize(obj, children, document) {
-      if (obj.kind != "block") return;
+      if (obj.kind !== "block") return;
       let parent = document.getParent(obj.key);
 
       switch (obj.type) {
@@ -37,6 +37,10 @@ const RULES = [
           } else {
             return `\n${children}\n`;
           }
+        case "code":
+          return `\`\`\`\n${children}\n\`\`\`\n`;
+        case "code-line":
+          return `${children}\n`;
         case "block-quote":
           return `> ${children}\n`;
         case "todo-list":
@@ -78,13 +82,13 @@ const RULES = [
         case "image":
           let alt = obj.getIn(["data", "alt"]);
           let src = obj.getIn(["data", "src"]);
-          return `![${alt}](${src})`;
+          return `![${alt}](${src})\n`;
       }
     }
   },
   {
     serialize(obj, children) {
-      if (obj.kind != "inline") return;
+      if (obj.kind !== "inline") return;
       switch (obj.type) {
         case "link":
           return `[${children.trim()}](${obj.getIn(["data", "href"])})`;
@@ -94,7 +98,7 @@ const RULES = [
   // Add a new rule that handles marks...
   {
     serialize(obj, children) {
-      if (obj.kind != "mark") return;
+      if (obj.kind !== "mark") return;
       switch (obj.type) {
         case "bold":
           return `**${children}**`;

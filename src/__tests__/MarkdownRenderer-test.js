@@ -132,3 +132,40 @@ test("parses todo list items with marks", () => {
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
 });
+
+test("parses ``` code fences", () => {
+  const text = `
+\`\`\`
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses ~~~ code fences", () => {
+  const text = `
+~~~
+const hello = 'world';
+function() {
+  return hello;
+}
+~~~
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses indented code blocks", () => {
+  const text = `
+    const hello = 'world';
+    function() {
+      return hello;
+    }
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});

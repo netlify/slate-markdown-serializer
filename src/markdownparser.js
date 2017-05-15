@@ -682,6 +682,7 @@ InlineLexer.prototype.outputLink = function(cap, link) {
     ? this.renderer.link(href, title, this.parse(cap[1]))
     : this.renderer.image(href, title, cap[1]);
 };
+``;
 
 /**
  * Renderer
@@ -712,17 +713,7 @@ Renderer.prototype.groupTextInRanges = function(childNode) {
         return acc;
       }
     } else if (current instanceof Array) {
-      if (lastIsText) {
-        acc[accLast].ranges = acc[accLast].ranges.concat(current);
-        return acc;
-      } else {
-        // Else, create a new text kind
-        acc.push({
-          kind: "text",
-          ranges: current
-        });
-        return acc;
-      }
+      return acc.concat(this.groupTextInRanges(current));
     } else {
       acc.push(current);
       return acc;
@@ -734,22 +725,16 @@ Renderer.prototype.groupTextInRanges = function(childNode) {
 
 Renderer.prototype.code = function(childNode, lang) {
   var data = {};
+
   if (lang) {
     data.language = this.options.langPrefix + lang;
   }
+
   return {
-    kind: "text",
-    ranges: [
-      {
-        text: childNode,
-        marks: [
-          {
-            type: "code",
-            data: data
-          }
-        ]
-      }
-    ]
+    kind: "block",
+    type: "code",
+    data,
+    nodes: this.groupTextInRanges(childNode)
   };
 };
 
@@ -1049,7 +1034,10 @@ Parser.prototype.tok = function() {
       );
     }
     case "code": {
-      return this.renderer.code(this.token.text, this.token.lang);
+      return this.renderer.code(
+        this.inline.parse(this.token.text),
+        this.token.lang
+      );
     }
     case "table": {
       let body = [];
