@@ -1,6 +1,13 @@
 import MarkdownRenderer from "../MarkdownRenderer";
 const Markdown = new MarkdownRenderer();
 
+test("parses paragraph", () => {
+  const output = Markdown.deserialize("This is just a sentance", {
+    terse: true
+  });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
 test("parses heading1", () => {
   const output = Markdown.deserialize("# Heading", { terse: true });
   expect(output.document.nodes).toMatchSnapshot();

@@ -5,239 +5,6 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "108",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "c",
-          },
-          Object {
-            "marks": Array [],
-            "text": "o",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "s",
-          },
-          Object {
-            "marks": Array [],
-            "text": "t",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "h",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "l",
-          },
-          Object {
-            "marks": Array [],
-            "text": "l",
-          },
-          Object {
-            "marks": Array [],
-            "text": "o",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "=",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "'",
-          },
-          Object {
-            "marks": Array [],
-            "text": "w",
-          },
-          Object {
-            "marks": Array [],
-            "text": "o",
-          },
-          Object {
-            "marks": Array [],
-            "text": "r",
-          },
-          Object {
-            "marks": Array [],
-            "text": "l",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "'",
-          },
-          Object {
-            "marks": Array [],
-            "text": ";",
-          },
-          Object {
-            "marks": Array [],
-            "text": "
-",
-          },
-          Object {
-            "marks": Array [],
-            "text": "f",
-          },
-          Object {
-            "marks": Array [],
-            "text": "u",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "c",
-          },
-          Object {
-            "marks": Array [],
-            "text": "t",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "o",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "(",
-          },
-          Object {
-            "marks": Array [],
-            "text": ")",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "{",
-          },
-          Object {
-            "marks": Array [],
-            "text": "
-",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "r",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "t",
-          },
-          Object {
-            "marks": Array [],
-            "text": "u",
-          },
-          Object {
-            "marks": Array [],
-            "text": "r",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": " ",
-          },
-          Object {
-            "marks": Array [],
-            "text": "h",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "l",
-          },
-          Object {
-            "marks": Array [],
-            "text": "l",
-          },
-          Object {
-            "marks": Array [],
-            "text": "o",
-          },
-          Object {
-            "marks": Array [],
-            "text": ";",
-          },
-          Object {
-            "marks": Array [],
-            "text": "
-",
-          },
-          Object {
-            "marks": Array [],
-            "text": "}",
-          },
-        ],
-        "key": "107",
-      },
-    ],
-    "type": "code",
-  },
-]
-`;
-
-exports[`parses ~~~ code fences 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
     "key": "111",
     "nodes": Array [
       Object {
@@ -466,283 +233,7 @@ Array [
 ]
 `;
 
-exports[`parses heading1 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "1",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "0",
-      },
-    ],
-    "type": "heading1",
-  },
-]
-`;
-
-exports[`parses heading2 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "4",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "3",
-      },
-    ],
-    "type": "heading2",
-  },
-]
-`;
-
-exports[`parses heading3 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "7",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "6",
-      },
-    ],
-    "type": "heading3",
-  },
-]
-`;
-
-exports[`parses heading4 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "10",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "9",
-      },
-    ],
-    "type": "heading4",
-  },
-]
-`;
-
-exports[`parses heading5 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "13",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "12",
-      },
-    ],
-    "type": "heading5",
-  },
-]
-`;
-
-exports[`parses heading6 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "key": "16",
-    "nodes": Array [
-      Object {
-        "characters": Array [
-          Object {
-            "marks": Array [],
-            "text": "H",
-          },
-          Object {
-            "marks": Array [],
-            "text": "e",
-          },
-          Object {
-            "marks": Array [],
-            "text": "a",
-          },
-          Object {
-            "marks": Array [],
-            "text": "d",
-          },
-          Object {
-            "marks": Array [],
-            "text": "i",
-          },
-          Object {
-            "marks": Array [],
-            "text": "n",
-          },
-          Object {
-            "marks": Array [],
-            "text": "g",
-          },
-        ],
-        "key": "15",
-      },
-    ],
-    "type": "heading6",
-  },
-]
-`;
-
-exports[`parses indented code blocks 1`] = `
+exports[`parses ~~~ code fences 1`] = `
 Array [
   Object {
     "data": Object {},
@@ -975,17 +466,526 @@ Array [
 ]
 `;
 
+exports[`parses heading1 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "4",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "3",
+      },
+    ],
+    "type": "heading1",
+  },
+]
+`;
+
+exports[`parses heading2 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "7",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "6",
+      },
+    ],
+    "type": "heading2",
+  },
+]
+`;
+
+exports[`parses heading3 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "10",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "9",
+      },
+    ],
+    "type": "heading3",
+  },
+]
+`;
+
+exports[`parses heading4 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "13",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "12",
+      },
+    ],
+    "type": "heading4",
+  },
+]
+`;
+
+exports[`parses heading5 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "16",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "15",
+      },
+    ],
+    "type": "heading5",
+  },
+]
+`;
+
+exports[`parses heading6 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "19",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "H",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "g",
+          },
+        ],
+        "key": "18",
+      },
+    ],
+    "type": "heading6",
+  },
+]
+`;
+
+exports[`parses indented code blocks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "117",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "c",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "h",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "=",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "'",
+          },
+          Object {
+            "marks": Array [],
+            "text": "w",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": "r",
+          },
+          Object {
+            "marks": Array [],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [],
+            "text": "d",
+          },
+          Object {
+            "marks": Array [],
+            "text": "'",
+          },
+          Object {
+            "marks": Array [],
+            "text": ";",
+          },
+          Object {
+            "marks": Array [],
+            "text": "
+",
+          },
+          Object {
+            "marks": Array [],
+            "text": "f",
+          },
+          Object {
+            "marks": Array [],
+            "text": "u",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "c",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "(",
+          },
+          Object {
+            "marks": Array [],
+            "text": ")",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "{",
+          },
+          Object {
+            "marks": Array [],
+            "text": "
+",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "r",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "u",
+          },
+          Object {
+            "marks": Array [],
+            "text": "r",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "h",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [],
+            "text": "l",
+          },
+          Object {
+            "marks": Array [],
+            "text": "o",
+          },
+          Object {
+            "marks": Array [],
+            "text": ";",
+          },
+          Object {
+            "marks": Array [],
+            "text": "
+",
+          },
+          Object {
+            "marks": Array [],
+            "text": "}",
+          },
+        ],
+        "key": "116",
+      },
+    ],
+    "type": "code",
+  },
+]
+`;
+
 exports[`parses indented list items 1`] = `
 Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "34",
+    "key": "37",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "31",
+        "key": "34",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1002,7 +1002,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "30",
+            "key": "33",
           },
         ],
         "type": "list-item",
@@ -1010,7 +1010,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "33",
+        "key": "36",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1027,7 +1027,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "32",
+            "key": "35",
           },
         ],
         "type": "list-item",
@@ -1043,12 +1043,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "28",
+    "key": "31",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "25",
+        "key": "28",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1065,7 +1065,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "24",
+            "key": "27",
           },
         ],
         "type": "list-item",
@@ -1073,7 +1073,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "27",
+        "key": "30",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1090,7 +1090,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "26",
+            "key": "29",
           },
         ],
         "type": "list-item",
@@ -1106,12 +1106,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "41",
+    "key": "44",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "38",
+        "key": "41",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1168,7 +1168,7 @@ Array [
                 "text": "d",
               },
             ],
-            "key": "36",
+            "key": "39",
           },
         ],
         "type": "list-item",
@@ -1176,7 +1176,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "40",
+        "key": "43",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1251,7 +1251,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "39",
+            "key": "42",
           },
         ],
         "type": "list-item",
@@ -1267,12 +1267,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "47",
+    "key": "50",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "44",
+        "key": "47",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1289,7 +1289,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "43",
+            "key": "46",
           },
         ],
         "type": "list-item",
@@ -1297,7 +1297,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "46",
+        "key": "49",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1314,7 +1314,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "45",
+            "key": "48",
           },
         ],
         "type": "list-item",
@@ -1330,12 +1330,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "62",
+    "key": "65",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "57",
+        "key": "60",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1352,7 +1352,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "56",
+            "key": "59",
           },
         ],
         "type": "list-item",
@@ -1360,7 +1360,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "59",
+        "key": "62",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1377,7 +1377,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "58",
+            "key": "61",
           },
         ],
         "type": "list-item",
@@ -1385,7 +1385,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "61",
+        "key": "64",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1410,7 +1410,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "60",
+            "key": "63",
           },
         ],
         "type": "list-item",
@@ -1426,12 +1426,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "54",
+    "key": "57",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "51",
+        "key": "54",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1488,7 +1488,7 @@ Array [
                 "text": "d",
               },
             ],
-            "key": "49",
+            "key": "52",
           },
         ],
         "type": "list-item",
@@ -1496,7 +1496,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "53",
+        "key": "56",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1571,7 +1571,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "52",
+            "key": "55",
           },
         ],
         "type": "list-item",
@@ -1582,12 +1582,122 @@ Array [
 ]
 `;
 
+exports[`parses paragraph 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "1",
+    "nodes": Array [
+      Object {
+        "characters": Array [
+          Object {
+            "marks": Array [],
+            "text": "T",
+          },
+          Object {
+            "marks": Array [],
+            "text": "h",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "i",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "j",
+          },
+          Object {
+            "marks": Array [],
+            "text": "u",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "marks": Array [],
+            "text": "s",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "t",
+          },
+          Object {
+            "marks": Array [],
+            "text": "a",
+          },
+          Object {
+            "marks": Array [],
+            "text": "n",
+          },
+          Object {
+            "marks": Array [],
+            "text": "c",
+          },
+          Object {
+            "marks": Array [],
+            "text": "e",
+          },
+        ],
+        "key": "0",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses quote 1`] = `
 Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "19",
+    "key": "22",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -1652,7 +1762,7 @@ Array [
             "text": "e",
           },
         ],
-        "key": "18",
+        "key": "21",
       },
     ],
     "type": "block-quote",
@@ -1665,7 +1775,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "22",
+    "key": "25",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -1750,7 +1860,7 @@ Array [
             "text": "e",
           },
         ],
-        "key": "21",
+        "key": "24",
       },
     ],
     "type": "block-quote",
@@ -1763,19 +1873,19 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "92",
+    "key": "95",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "70",
+        "key": "73",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "65",
+            "key": "68",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1804,7 +1914,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "64",
+                "key": "67",
               },
             ],
             "type": "table-head",
@@ -1814,7 +1924,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "67",
+            "key": "70",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1831,7 +1941,7 @@ Array [
                     "text": "e",
                   },
                 ],
-                "key": "66",
+                "key": "69",
               },
             ],
             "type": "table-head",
@@ -1841,7 +1951,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "69",
+            "key": "72",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1862,7 +1972,7 @@ Array [
                     "text": "l",
                   },
                 ],
-                "key": "68",
+                "key": "71",
               },
             ],
             "type": "table-head",
@@ -1873,14 +1983,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "77",
+        "key": "80",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "72",
+            "key": "75",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1917,7 +2027,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "71",
+                "key": "74",
               },
             ],
             "type": "table-cell",
@@ -1927,7 +2037,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "74",
+            "key": "77",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1980,7 +2090,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "73",
+                "key": "76",
               },
             ],
             "type": "table-cell",
@@ -1990,7 +2100,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "76",
+            "key": "79",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2015,7 +2125,7 @@ Array [
                     "text": "0",
                   },
                 ],
-                "key": "75",
+                "key": "78",
               },
             ],
             "type": "table-cell",
@@ -2026,14 +2136,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "84",
+        "key": "87",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "79",
+            "key": "82",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2070,7 +2180,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "78",
+                "key": "81",
               },
             ],
             "type": "table-cell",
@@ -2080,7 +2190,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "81",
+            "key": "84",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2117,7 +2227,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "80",
+                "key": "83",
               },
             ],
             "type": "table-cell",
@@ -2127,7 +2237,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "83",
+            "key": "86",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2144,7 +2254,7 @@ Array [
                     "text": "2",
                   },
                 ],
-                "key": "82",
+                "key": "85",
               },
             ],
             "type": "table-cell",
@@ -2155,14 +2265,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "91",
+        "key": "94",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "86",
+            "key": "89",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2199,7 +2309,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "85",
+                "key": "88",
               },
             ],
             "type": "table-cell",
@@ -2209,7 +2319,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "88",
+            "key": "91",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2266,7 +2376,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "87",
+                "key": "90",
               },
             ],
             "type": "table-cell",
@@ -2276,7 +2386,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "90",
+            "key": "93",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2289,7 +2399,7 @@ Array [
                     "text": "1",
                   },
                 ],
-                "key": "89",
+                "key": "92",
               },
             ],
             "type": "table-cell",
@@ -2308,14 +2418,14 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "98",
+    "key": "101",
     "nodes": Array [
       Object {
         "data": Object {
           "checked": false,
         },
         "isVoid": false,
-        "key": "95",
+        "key": "98",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2336,7 +2446,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "94",
+            "key": "97",
           },
         ],
         "type": "list-item",
@@ -2346,7 +2456,7 @@ Array [
           "checked": true,
         },
         "isVoid": false,
-        "key": "97",
+        "key": "100",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2367,7 +2477,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "96",
+            "key": "99",
           },
         ],
         "type": "list-item",
@@ -2383,14 +2493,14 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "105",
+    "key": "108",
     "nodes": Array [
       Object {
         "data": Object {
           "checked": true,
         },
         "isVoid": false,
-        "key": "101",
+        "key": "104",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2431,7 +2541,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "100",
+            "key": "103",
           },
         ],
         "type": "list-item",
@@ -2441,7 +2551,7 @@ Array [
           "checked": true,
         },
         "isVoid": false,
-        "key": "104",
+        "key": "107",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2502,7 +2612,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "102",
+            "key": "105",
           },
         ],
         "type": "list-item",
