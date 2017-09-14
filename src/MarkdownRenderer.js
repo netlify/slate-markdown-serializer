@@ -1,6 +1,6 @@
 import markdownparser from "./markdownparser";
-import { Raw } from "slate";
 import { Record } from "immutable";
+import { State } from "slate";
 
 /**
  * String.
@@ -221,8 +221,8 @@ class Markdown {
    * @return {State} state
    */
   deserialize(markdown) {
-    const nodes = markdownparser.parse(markdown);
-    const state = Raw.deserialize(nodes, { terse: true });
+    const document = markdownparser.parse(markdown);
+    const state = State.fromJSON({ document });
     return state;
   }
 }
