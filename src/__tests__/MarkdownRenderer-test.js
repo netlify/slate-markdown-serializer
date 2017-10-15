@@ -63,6 +63,16 @@ test("parses list items", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("parses list with trailing item", () => {
+  const text = `
+- one
+- two
+- 
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
 test("parses indented list items", () => {
   const text = `
  - one

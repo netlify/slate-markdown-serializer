@@ -151,7 +151,10 @@ class Markdown {
       this.serializeNode(node, document)
     );
 
-    return elements.join("\n").trim();
+    const output = elements.join("\n");
+
+    // trim beginning whitespace
+    return output.replace(/^\s+/g, "");
   }
 
   /**

@@ -5,7 +5,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "111",
+    "key": "119",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -225,7 +225,7 @@ Array [
             "text": "}",
           },
         ],
-        "key": "110",
+        "key": "118",
       },
     ],
     "type": "code",
@@ -238,7 +238,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "114",
+    "key": "122",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -458,7 +458,7 @@ Array [
             "text": "}",
           },
         ],
-        "key": "113",
+        "key": "121",
       },
     ],
     "type": "code",
@@ -747,7 +747,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "117",
+    "key": "125",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -967,7 +967,7 @@ Array [
             "text": "}",
           },
         ],
-        "key": "116",
+        "key": "124",
       },
     ],
     "type": "code",
@@ -980,12 +980,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "37",
+    "key": "45",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "34",
+        "key": "42",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1002,7 +1002,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "33",
+            "key": "41",
           },
         ],
         "type": "list-item",
@@ -1010,7 +1010,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "36",
+        "key": "44",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1027,7 +1027,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "35",
+            "key": "43",
           },
         ],
         "type": "list-item",
@@ -1043,12 +1043,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "136",
+    "key": "144",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "135",
+        "key": "143",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1265,12 +1265,12 @@ Array [
                 "text": "k",
               },
             ],
-            "key": "131",
+            "key": "139",
           },
           Object {
             "data": Object {},
             "isVoid": false,
-            "key": "134",
+            "key": "142",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1512,7 +1512,7 @@ Array [
                     "text": ")",
                   },
                 ],
-                "key": "133",
+                "key": "141",
               },
             ],
             "type": "block-quote",
@@ -1531,18 +1531,18 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "121",
+    "key": "129",
     "nodes": Array [
       Object {
         "characters": Array [],
-        "key": "123",
+        "key": "131",
       },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
         "isVoid": false,
-        "key": "120",
+        "key": "128",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1571,14 +1571,14 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "119",
+            "key": "127",
           },
         ],
         "type": "link",
       },
       Object {
         "characters": Array [],
-        "key": "124",
+        "key": "132",
       },
     ],
     "type": "paragraph",
@@ -1591,18 +1591,18 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "127",
+    "key": "135",
     "nodes": Array [
       Object {
         "characters": Array [],
-        "key": "129",
+        "key": "137",
       },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
         "isVoid": false,
-        "key": "126",
+        "key": "134",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1631,14 +1631,14 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "125",
+            "key": "133",
           },
         ],
         "type": "link",
       },
       Object {
         "characters": Array [],
-        "key": "130",
+        "key": "138",
       },
     ],
     "type": "paragraph",
@@ -1714,12 +1714,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "44",
+    "key": "52",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "41",
+        "key": "49",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1776,7 +1776,7 @@ Array [
                 "text": "d",
               },
             ],
-            "key": "39",
+            "key": "47",
           },
         ],
         "type": "list-item",
@@ -1784,7 +1784,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "43",
+        "key": "51",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1859,7 +1859,82 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "42",
+            "key": "50",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses list with trailing item 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "39",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "34",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "33",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "36",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "w",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "35",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "key": "38",
+        "nodes": Array [
+          Object {
+            "characters": Array [],
+            "key": "37",
           },
         ],
         "type": "list-item",
@@ -1875,12 +1950,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "50",
+    "key": "58",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "47",
+        "key": "55",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1897,7 +1972,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "46",
+            "key": "54",
           },
         ],
         "type": "list-item",
@@ -1905,7 +1980,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "49",
+        "key": "57",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1922,7 +1997,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "48",
+            "key": "56",
           },
         ],
         "type": "list-item",
@@ -1938,12 +2013,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "65",
+    "key": "73",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "60",
+        "key": "68",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1960,7 +2035,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "59",
+            "key": "67",
           },
         ],
         "type": "list-item",
@@ -1968,7 +2043,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "62",
+        "key": "70",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1985,7 +2060,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "61",
+            "key": "69",
           },
         ],
         "type": "list-item",
@@ -1993,7 +2068,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "64",
+        "key": "72",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2018,7 +2093,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "63",
+            "key": "71",
           },
         ],
         "type": "list-item",
@@ -2034,12 +2109,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "57",
+    "key": "65",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "54",
+        "key": "62",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2096,7 +2171,7 @@ Array [
                 "text": "d",
               },
             ],
-            "key": "52",
+            "key": "60",
           },
         ],
         "type": "list-item",
@@ -2104,7 +2179,7 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "56",
+        "key": "64",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -2179,7 +2254,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "55",
+            "key": "63",
           },
         ],
         "type": "list-item",
@@ -2481,19 +2556,19 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "95",
+    "key": "103",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "73",
+        "key": "81",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "68",
+            "key": "76",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2522,7 +2597,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "67",
+                "key": "75",
               },
             ],
             "type": "table-head",
@@ -2532,7 +2607,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "70",
+            "key": "78",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2549,7 +2624,7 @@ Array [
                     "text": "e",
                   },
                 ],
-                "key": "69",
+                "key": "77",
               },
             ],
             "type": "table-head",
@@ -2559,7 +2634,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "72",
+            "key": "80",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2580,7 +2655,7 @@ Array [
                     "text": "l",
                   },
                 ],
-                "key": "71",
+                "key": "79",
               },
             ],
             "type": "table-head",
@@ -2591,14 +2666,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "80",
+        "key": "88",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "75",
+            "key": "83",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2635,7 +2710,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "74",
+                "key": "82",
               },
             ],
             "type": "table-cell",
@@ -2645,7 +2720,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "77",
+            "key": "85",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2698,7 +2773,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "76",
+                "key": "84",
               },
             ],
             "type": "table-cell",
@@ -2708,7 +2783,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "79",
+            "key": "87",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2733,7 +2808,7 @@ Array [
                     "text": "0",
                   },
                 ],
-                "key": "78",
+                "key": "86",
               },
             ],
             "type": "table-cell",
@@ -2744,14 +2819,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "87",
+        "key": "95",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "82",
+            "key": "90",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2788,7 +2863,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "81",
+                "key": "89",
               },
             ],
             "type": "table-cell",
@@ -2798,7 +2873,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "84",
+            "key": "92",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2835,7 +2910,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "83",
+                "key": "91",
               },
             ],
             "type": "table-cell",
@@ -2845,7 +2920,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "86",
+            "key": "94",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2862,7 +2937,7 @@ Array [
                     "text": "2",
                   },
                 ],
-                "key": "85",
+                "key": "93",
               },
             ],
             "type": "table-cell",
@@ -2873,14 +2948,14 @@ Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "94",
+        "key": "102",
         "nodes": Array [
           Object {
             "data": Object {
               "align": null,
             },
             "isVoid": false,
-            "key": "89",
+            "key": "97",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2917,7 +2992,7 @@ Array [
                     "text": "s",
                   },
                 ],
-                "key": "88",
+                "key": "96",
               },
             ],
             "type": "table-cell",
@@ -2927,7 +3002,7 @@ Array [
               "align": "center",
             },
             "isVoid": false,
-            "key": "91",
+            "key": "99",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -2984,7 +3059,7 @@ Array [
                     "text": "d",
                   },
                 ],
-                "key": "90",
+                "key": "98",
               },
             ],
             "type": "table-cell",
@@ -2994,7 +3069,7 @@ Array [
               "align": "right",
             },
             "isVoid": false,
-            "key": "93",
+            "key": "101",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -3007,7 +3082,7 @@ Array [
                     "text": "1",
                   },
                 ],
-                "key": "92",
+                "key": "100",
               },
             ],
             "type": "table-cell",
@@ -3026,14 +3101,14 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "101",
+    "key": "109",
     "nodes": Array [
       Object {
         "data": Object {
           "checked": false,
         },
         "isVoid": false,
-        "key": "98",
+        "key": "106",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3054,7 +3129,7 @@ Array [
                 "text": "o",
               },
             ],
-            "key": "97",
+            "key": "105",
           },
         ],
         "type": "list-item",
@@ -3064,7 +3139,7 @@ Array [
           "checked": true,
         },
         "isVoid": false,
-        "key": "100",
+        "key": "108",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3085,7 +3160,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "99",
+            "key": "107",
           },
         ],
         "type": "list-item",
@@ -3101,14 +3176,14 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "108",
+    "key": "116",
     "nodes": Array [
       Object {
         "data": Object {
           "checked": true,
         },
         "isVoid": false,
-        "key": "104",
+        "key": "112",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3149,7 +3224,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "103",
+            "key": "111",
           },
         ],
         "type": "list-item",
@@ -3159,7 +3234,7 @@ Array [
           "checked": true,
         },
         "isVoid": false,
-        "key": "107",
+        "key": "115",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3220,7 +3295,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "105",
+            "key": "113",
           },
         ],
         "type": "list-item",
