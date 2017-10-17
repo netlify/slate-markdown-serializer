@@ -67,7 +67,7 @@ test("parses list with trailing item", () => {
   const text = `
 - one
 - two
-- 
+-
 `;
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
@@ -129,7 +129,9 @@ test("parses tables", () => {
 `;
 
   const output = Markdown.deserialize(text, { terse: true });
-  expect(output.document.nodes).toMatchSnapshot();
+  const result = Markdown.serialize(output);
+  const output2 = Markdown.deserialize(text, { terse: true });
+  expect(output2.document.nodes).toMatchSnapshot();
 });
 
 test("parses todo list items", () => {

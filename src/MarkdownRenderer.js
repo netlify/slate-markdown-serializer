@@ -17,6 +17,8 @@ const String = new Record({
  * @type {Object}
  */
 
+let tableHeader = "";
+
 const RULES = [
   {
     serialize(obj, children) {
@@ -31,6 +33,33 @@ const RULES = [
       let parent = document.getParent(obj.key);
 
       switch (obj.type) {
+        case "table":
+          return children;
+        case "table-head": {
+          switch (obj.getIn(["data", "align"])) {
+            case "left":
+              tableHeader += "|:--- ";
+              break;
+            case "center":
+              tableHeader += "|:---:";
+              break;
+            case "right":
+              tableHeader += "| ---:";
+              break;
+            default:
+              tableHeader += "| --- ";
+          }
+          return `| ${children} `;
+        }
+        case "table-row":
+          let output = "";
+          if (tableHeader) {
+            output = `${tableHeader}|\n`;
+            tableHeader = "";
+          }
+          return `${children}|\n${output}`;
+        case "table-cell":
+          return `| ${children} `;
         case "paragraph":
           if (parent.type === "list-item") {
             return children;
