@@ -2,7 +2,7 @@
   "name": "slate-markdown-serializer",
   "version": "0.5.0",
   "description": "",
-  "main": "lib/MarkdownRenderer.js",
+  "main": "lib/renderer.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src -d lib --ignore test",

@@ -1043,12 +1043,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "172",
+    "key": "184",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "171",
+        "key": "183",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1265,12 +1265,12 @@ Array [
                 "text": "k",
               },
             ],
-            "key": "167",
+            "key": "179",
           },
           Object {
             "data": Object {},
             "isVoid": false,
-            "key": "170",
+            "key": "182",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1512,7 +1512,7 @@ Array [
                     "text": ")",
                   },
                 ],
-                "key": "169",
+                "key": "181",
               },
             ],
             "type": "block-quote",
@@ -1579,6 +1579,66 @@ Array [
       Object {
         "characters": Array [],
         "key": "160",
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link with encoded characters 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "175",
+    "nodes": Array [
+      Object {
+        "characters": Array [],
+        "key": "177",
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
+        },
+        "isVoid": false,
+        "key": "174",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "k",
+              },
+              Object {
+                "marks": Array [],
+                "text": "i",
+              },
+              Object {
+                "marks": Array [],
+                "text": "b",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+              Object {
+                "marks": Array [],
+                "text": "n",
+              },
+              Object {
+                "marks": Array [],
+                "text": "a",
+              },
+            ],
+            "key": "173",
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "characters": Array [],
+        "key": "178",
       },
     ],
     "type": "paragraph",
