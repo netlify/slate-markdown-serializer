@@ -1,10 +1,7 @@
-import markdownparser from "./markdownparser";
+import parser from "./parser";
 import { Raw } from "slate";
 import { Record } from "immutable";
-
-/**
- * String.
- */
+import { encode } from "./urls";
 
 const String = new Record({
   kind: "string",
@@ -34,6 +31,7 @@ const RULES = [
 
       switch (obj.type) {
         case "table":
+          tableHeader = "";
           return children;
         case "table-head": {
           switch (obj.getIn(["data", "align"])) {
@@ -109,8 +107,8 @@ const RULES = [
         case "horizontal-rule":
           return `---\n`;
         case "image":
-          let alt = obj.getIn(["data", "alt"]);
-          let src = obj.getIn(["data", "src"]);
+          const alt = obj.getIn(["data", "alt"]);
+          const src = encode(obj.getIn(["data", "src"]) || "");
           return `![${alt}](${src})\n`;
       }
     }
@@ -120,7 +118,8 @@ const RULES = [
       if (obj.kind !== "inline") return;
       switch (obj.type) {
         case "link":
-          return `[${children.trim()}](${obj.getIn(["data", "href"])})`;
+          const href = encode(obj.getIn(["data", "href"]) || "");
+          return `[${children.trim()}](${href})`;
       }
     }
   },
@@ -253,14 +252,10 @@ class Markdown {
    * @return {State} state
    */
   deserialize(markdown) {
-    const nodes = markdownparser.parse(markdown);
+    const nodes = parser.parse(markdown);
     const state = Raw.deserialize(nodes, { terse: true });
     return state;
   }
 }
-
-/**
- * Export.
- */
 
 export default Markdown;
