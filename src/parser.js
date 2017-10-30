@@ -1,3 +1,5 @@
+import { decode } from "./urls";
+
 /**
  * Ported from:
  *   https://github.com/chjj/marked/blob/49b7eaca/lib/marked.js
@@ -884,7 +886,7 @@ Renderer.prototype.ins = function(childNode) {
 
 Renderer.prototype.link = function(href, title, childNode) {
   var data = {
-    href: href
+    href: decode(href)
   };
   if (title) {
     data.title = title;
@@ -899,7 +901,7 @@ Renderer.prototype.link = function(href, title, childNode) {
 
 Renderer.prototype.image = function(href, title, alt) {
   var data = {
-    src: href
+    src: decode(href)
   };
 
   if (title) {

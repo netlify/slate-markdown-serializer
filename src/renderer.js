@@ -1,10 +1,7 @@
-import markdownparser from "./markdownparser";
-import { Record } from "immutable";
+import parser from "./parser";
 import { State } from "slate";
-
-/**
- * String.
- */
+import { Record } from "immutable";
+import { encode } from "./urls";
 
 const String = new Record({
   kind: "string",
@@ -16,6 +13,8 @@ const String = new Record({
  *
  * @type {Object}
  */
+
+let tableHeader = "";
 
 const RULES = [
   {
@@ -31,6 +30,34 @@ const RULES = [
       let parent = document.getParent(obj.key);
 
       switch (obj.type) {
+        case "table":
+          tableHeader = "";
+          return children;
+        case "table-head": {
+          switch (obj.getIn(["data", "align"])) {
+            case "left":
+              tableHeader += "|:--- ";
+              break;
+            case "center":
+              tableHeader += "|:---:";
+              break;
+            case "right":
+              tableHeader += "| ---:";
+              break;
+            default:
+              tableHeader += "| --- ";
+          }
+          return `| ${children} `;
+        }
+        case "table-row":
+          let output = "";
+          if (tableHeader) {
+            output = `${tableHeader}|\n`;
+            tableHeader = "";
+          }
+          return `${children}|\n${output}`;
+        case "table-cell":
+          return `| ${children} `;
         case "paragraph":
           if (parent.type === "list-item") {
             return children;
@@ -80,8 +107,8 @@ const RULES = [
         case "horizontal-rule":
           return `---\n`;
         case "image":
-          let alt = obj.getIn(["data", "alt"]);
-          let src = obj.getIn(["data", "src"]);
+          const alt = obj.getIn(["data", "alt"]);
+          const src = encode(obj.getIn(["data", "src"]) || "");
           return `![${alt}](${src})\n`;
       }
     }
@@ -91,7 +118,8 @@ const RULES = [
       if (obj.kind !== "inline") return;
       switch (obj.type) {
         case "link":
-          return `[${children.trim()}](${obj.getIn(["data", "href"])})`;
+          const href = encode(obj.getIn(["data", "href"]) || "");
+          return `[${children.trim()}](${href})`;
       }
     }
   },
@@ -151,7 +179,10 @@ class Markdown {
       this.serializeNode(node, document)
     );
 
-    return elements.join("\n").trim();
+    const output = elements.join("\n");
+
+    // trim beginning whitespace
+    return output.replace(/^\s+/g, "");
   }
 
   /**
@@ -221,14 +252,10 @@ class Markdown {
    * @return {State} state
    */
   deserialize(markdown) {
-    const document = markdownparser.parse(markdown);
+    const document = parser.parse(markdown);
     const state = State.fromJSON({ document });
     return state;
   }
 }
-
-/**
- * Export.
- */
 
 export default Markdown;

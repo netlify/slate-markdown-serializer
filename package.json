@@ -1,8 +1,8 @@
 {
   "name": "slate-markdown-serializer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "lib/MarkdownRenderer.js",
+  "main": "lib/renderer.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src -d lib --ignore test",
@@ -33,7 +33,7 @@
     "prettier": "^1.3.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "slate": ">=0.24.0"
+    "slate": "0.24.0"
   },
   "jest": {
     "roots": [

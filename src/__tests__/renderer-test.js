@@ -1,4 +1,4 @@
-import MarkdownRenderer from "../MarkdownRenderer";
+import MarkdownRenderer from "../renderer";
 const Markdown = new MarkdownRenderer();
 
 test("parses paragraph", () => {
@@ -63,6 +63,16 @@ test("parses list items", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("parses list with trailing item", () => {
+  const text = `
+- one
+- two
+-
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
 test("parses indented list items", () => {
   const text = `
  - one
@@ -119,7 +129,9 @@ test("parses tables", () => {
 `;
 
   const output = Markdown.deserialize(text, { terse: true });
-  expect(output.document.nodes).toMatchSnapshot();
+  const result = Markdown.serialize(output);
+  const output2 = Markdown.deserialize(result, { terse: true });
+  expect(output2.document.nodes).toMatchSnapshot();
 });
 
 test("parses todo list items", () => {
@@ -187,6 +199,14 @@ test("parses link within mark", () => {
   const text = `**[google](http://google.com)**`;
   const output = Markdown.deserialize(text, { terse: true });
   expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses link with encoded characters", () => {
+  const text = `[kibana](https://example.com/app/kibana#/discover?_g=%28refreshInterval:%28%27$$hashKey%27:%27object:1596%27,display:%2710%20seconds%27,pause:!f,section:1,value:10000%29,time:%28from:now-15m,mode:quick,to:now%29%29&_a=%28columns:!%28metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url%29,index:%27logs-%27,interval:auto,query:%28query_string:%28analyze_wildcard:!t,query:%27metadata.at:%20Stepper*%27%29%29,sort:!%28time,desc%29%29)`;
+  const output = Markdown.deserialize(text, { terse: true });
+  const result = Markdown.serialize(output);
+  const output2 = Markdown.deserialize(result, { terse: true });
+  expect(output2.document.nodes).toMatchSnapshot();
 });
 
 test("parses interesting nesting", () => {

@@ -1,0 +1,1301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses \`\`\` code fences 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+      },
+    ],
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses ~~~ code fences 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+      },
+    ],
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses heading1 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading1",
+  },
+]
+`;
+
+exports[`parses heading2 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading2",
+  },
+]
+`;
+
+exports[`parses heading3 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading3",
+  },
+]
+`;
+
+exports[`parses heading4 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading4",
+  },
+]
+`;
+
+exports[`parses heading5 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading5",
+  },
+]
+`;
+
+exports[`parses heading6 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "Heading",
+          },
+        ],
+      },
+    ],
+    "type": "heading6",
+  },
+]
+`;
+
+exports[`parses indented code blocks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+      },
+    ],
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses indented list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses interesting nesting 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "List item that contains a blockquote with inline mark",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses link 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "google",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link with encoded characters 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "kibana",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link within mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "google",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one ",
+              },
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "bold",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "italic",
+                  },
+                ],
+                "text": "italic",
+              },
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": " two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses list with trailing item 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "two
+-",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses ordered list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with different numbers 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "three",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "one ",
+              },
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "bold",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "italic",
+                  },
+                ],
+                "text": "italic",
+              },
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": " two",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses paragraph 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "This is just a sentance",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses quote 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": "this is a quote",
+          },
+        ],
+      },
+    ],
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`parses quote with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "ranges": Array [
+          Object {
+            "kind": "range",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "bold",
+              },
+            ],
+            "text": "bold",
+          },
+          Object {
+            "kind": "range",
+            "marks": Array [],
+            "text": " in a quote",
+          },
+        ],
+      },
+    ],
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`parses tables 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "Tables",
+                  },
+                ],
+              },
+            ],
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "Are",
+                  },
+                ],
+              },
+            ],
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "Cool",
+                  },
+                ],
+              },
+            ],
+            "type": "table-head",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "col 1 is",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "left-aligned",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "$1600",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "col 2 is",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "centered",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "$12",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "col 3 is",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "right-aligned",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "ranges": Array [
+                  Object {
+                    "kind": "range",
+                    "marks": Array [],
+                    "text": "$1",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+        ],
+        "type": "table-row",
+      },
+    ],
+    "type": "table",
+  },
+]
+`;
+
+exports[`parses todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "todo",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "done",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses todo list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "deleted",
+                  },
+                ],
+                "text": "done",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "kind": "block",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "ranges": Array [
+              Object {
+                "kind": "range",
+                "marks": Array [],
+                "text": "more ",
+              },
+              Object {
+                "kind": "range",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "done",
+              },
+            ],
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
+  },
+]
+`;
