@@ -119,6 +119,18 @@ test("parses ordered list items with different numbers", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("parses mixed list items", () => {
+  const text = `
+1. list
+
+- another
+
+1. different
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
 test("parses tables", () => {
   const text = `
 | Tables   |      Are      |  Cool |
