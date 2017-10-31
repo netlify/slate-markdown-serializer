@@ -1,5 +1,5 @@
 import parser from "./parser";
-import { State } from "slate";
+import { Value } from "slate";
 import { Record } from "immutable";
 import { encode } from "./urls";
 
@@ -253,7 +253,7 @@ class Markdown {
    */
   deserialize(markdown) {
     const document = parser.parse(markdown);
-    const state = State.fromJSON({ document });
+    const state = Value.fromJSON({ document });
     return state;
   }
 }
