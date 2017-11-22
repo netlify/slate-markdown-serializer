@@ -5,7 +5,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "157",
+    "key": "177",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -225,7 +225,7 @@ Array [
             "text": "}",
           },
         ],
-        "key": "156",
+        "key": "176",
       },
     ],
     "type": "code",
@@ -238,7 +238,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "160",
+    "key": "180",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -458,10 +458,187 @@ Array [
             "text": "}",
           },
         ],
-        "key": "159",
+        "key": "179",
       },
     ],
     "type": "code",
+  },
+]
+`;
+
+exports[`parses double nested todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "167",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "key": "164",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": "h",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": "c",
+              },
+              Object {
+                "marks": Array [],
+                "text": "k",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": "d",
+              },
+            ],
+            "key": "158",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "163",
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "key": "160",
+                "nodes": Array [
+                  Object {
+                    "characters": Array [
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "m",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "p",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "t",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "y",
+                      },
+                    ],
+                    "key": "159",
+                  },
+                ],
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": true,
+                },
+                "isVoid": false,
+                "key": "162",
+                "nodes": Array [
+                  Object {
+                    "characters": Array [
+                      Object {
+                        "marks": Array [],
+                        "text": "c",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "h",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "c",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "k",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "d",
+                      },
+                    ],
+                    "key": "161",
+                  },
+                ],
+                "type": "list-item",
+              },
+            ],
+            "type": "todo-list",
+          },
+        ],
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "key": "166",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "h",
+              },
+              Object {
+                "marks": Array [],
+                "text": "r",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+              Object {
+                "marks": Array [],
+                "text": "e",
+              },
+            ],
+            "key": "165",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
   },
 ]
 `;
@@ -747,7 +924,7 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "163",
+    "key": "183",
     "nodes": Array [
       Object {
         "characters": Array [
@@ -967,7 +1144,7 @@ Array [
             "text": "}",
           },
         ],
-        "key": "162",
+        "key": "182",
       },
     ],
     "type": "code",
@@ -1043,12 +1220,12 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "194",
+    "key": "214",
     "nodes": Array [
       Object {
         "data": Object {},
         "isVoid": false,
-        "key": "193",
+        "key": "213",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1265,12 +1442,12 @@ Array [
                 "text": "k",
               },
             ],
-            "key": "189",
+            "key": "209",
           },
           Object {
             "data": Object {},
             "isVoid": false,
-            "key": "192",
+            "key": "212",
             "nodes": Array [
               Object {
                 "characters": Array [
@@ -1512,7 +1689,7 @@ Array [
                     "text": ")",
                   },
                 ],
-                "key": "191",
+                "key": "211",
               },
             ],
             "type": "block-quote",
@@ -1531,18 +1708,18 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "167",
+    "key": "187",
     "nodes": Array [
       Object {
         "characters": Array [],
-        "key": "169",
+        "key": "189",
       },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
         "isVoid": false,
-        "key": "166",
+        "key": "186",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1571,14 +1748,14 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "165",
+            "key": "185",
           },
         ],
         "type": "link",
       },
       Object {
         "characters": Array [],
-        "key": "170",
+        "key": "190",
       },
     ],
     "type": "paragraph",
@@ -1591,18 +1768,18 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "185",
+    "key": "205",
     "nodes": Array [
       Object {
         "characters": Array [],
-        "key": "187",
+        "key": "207",
       },
       Object {
         "data": Object {
           "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
         },
         "isVoid": false,
-        "key": "184",
+        "key": "204",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1631,14 +1808,14 @@ Array [
                 "text": "a",
               },
             ],
-            "key": "183",
+            "key": "203",
           },
         ],
         "type": "link",
       },
       Object {
         "characters": Array [],
-        "key": "188",
+        "key": "208",
       },
     ],
     "type": "paragraph",
@@ -1651,18 +1828,18 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "173",
+    "key": "193",
     "nodes": Array [
       Object {
         "characters": Array [],
-        "key": "175",
+        "key": "195",
       },
       Object {
         "data": Object {
           "href": "http://google.com",
         },
         "isVoid": false,
-        "key": "172",
+        "key": "192",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -1691,14 +1868,14 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "171",
+            "key": "191",
           },
         ],
         "type": "link",
       },
       Object {
         "characters": Array [],
-        "key": "176",
+        "key": "196",
       },
     ],
     "type": "paragraph",
@@ -2146,6 +2323,128 @@ Array [
       },
     ],
     "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses nested todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "key": "156",
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "key": "155",
+        "nodes": Array [
+          Object {
+            "characters": Array [
+              Object {
+                "marks": Array [],
+                "text": "t",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+              Object {
+                "marks": Array [],
+                "text": "d",
+              },
+              Object {
+                "marks": Array [],
+                "text": "o",
+              },
+            ],
+            "key": "149",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "key": "154",
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "key": "151",
+                "nodes": Array [
+                  Object {
+                    "characters": Array [
+                      Object {
+                        "marks": Array [],
+                        "text": "n",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "s",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "t",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "d",
+                      },
+                    ],
+                    "key": "150",
+                  },
+                ],
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "key": "153",
+                "nodes": Array [
+                  Object {
+                    "characters": Array [
+                      Object {
+                        "marks": Array [],
+                        "text": "d",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "e",
+                      },
+                      Object {
+                        "marks": Array [],
+                        "text": "p",
+                      },
+                    ],
+                    "key": "152",
+                  },
+                ],
+                "type": "list-item",
+              },
+            ],
+            "type": "todo-list",
+          },
+        ],
+        "type": "list-item",
+      },
+    ],
+    "type": "todo-list",
   },
 ]
 `;
@@ -3381,14 +3680,14 @@ Array [
   Object {
     "data": Object {},
     "isVoid": false,
-    "key": "154",
+    "key": "174",
     "nodes": Array [
       Object {
         "data": Object {
           "checked": true,
         },
         "isVoid": false,
-        "key": "150",
+        "key": "170",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3429,7 +3728,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "149",
+            "key": "169",
           },
         ],
         "type": "list-item",
@@ -3439,7 +3738,7 @@ Array [
           "checked": true,
         },
         "isVoid": false,
-        "key": "153",
+        "key": "173",
         "nodes": Array [
           Object {
             "characters": Array [
@@ -3500,7 +3799,7 @@ Array [
                 "text": "e",
               },
             ],
-            "key": "151",
+            "key": "171",
           },
         ],
         "type": "list-item",

@@ -155,6 +155,28 @@ test("parses todo list items", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("parses nested todo list items", () => {
+  const text = `
+[ ] todo
+   [ ] nested
+   [ ] deep
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
+test("parses double nested todo list items", () => {
+  const text = `
+[x] checked
+   [ ] empty
+   [x] checked
+
+[ ] three
+`;
+  const output = Markdown.deserialize(text, { terse: true });
+  expect(output.document.nodes).toMatchSnapshot();
+});
+
 test("parses todo list items with marks", () => {
   const text = `
  [x] ~~done~~
