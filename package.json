@@ -1,10 +1,10 @@
 {
-  "name": "slate-markdown-serializer",
+  "name": "slate-md-serializer",
   "version": "1.0.1",
   "description": "",
   "main": "lib/renderer.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "yarn build",
     "build": "babel src -d lib --ignore test",
     "lint": "eslint src --fix",
     "test": "jest"
@@ -13,11 +13,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/netlify/slate-markdown-serializer.git"
+    "url": "git://github.com/tommoor/slate-md-serializer.git"
   },
   "peerDependencies": {
     "immutable": ">=3.0.0",
-    "slate": ">=0.24.0"
+    "slate": ">=0.30.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
@@ -33,7 +33,7 @@
     "prettier": "^1.3.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "slate": "0.24.0"
+    "slate": "0.30.0"
   },
   "jest": {
     "roots": [

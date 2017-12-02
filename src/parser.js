@@ -37,7 +37,7 @@ var defaults = {
   tables: true,
   breaks: false,
   pedantic: false,
-  smartLists: false,
+  smartLists: true,
   silent: false,
   langPrefix: "lang-",
   renderer: new Renderer()
@@ -1092,6 +1092,7 @@ Parser.prototype.tok = function() {
 
       return this.renderer.list(body, style);
     }
+    case "loose_item_start":
     case "list_item_start": {
       let body = [];
       let flags = { checked: this.token.checked };
@@ -1101,14 +1102,6 @@ Parser.prototype.tok = function() {
       }
 
       return this.renderer.listitem(body, flags);
-    }
-    case "loose_item_start": {
-      let body = [];
-
-      while (this.next().type !== "list_item_end") {
-        body.push(this.token.type === "text" ? this.parseText() : this.tok());
-      }
-      return this.renderer.listitem(body);
     }
     case "paragraph": {
       return this.renderer.paragraph(this.inline.parse(this.token.text));

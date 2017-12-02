@@ -1279,7 +1279,7 @@ es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
     es5-ext "^0.10.14"
     es6-symbol "^3.1"
 
-es6-map@^0.1.3, es6-map@^0.1.4:
+es6-map@^0.1.3:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/es6-map/-/es6-map-0.1.5.tgz#9136e0503dcc06a301690f0bb14ff4e364e949f0"
   dependencies:
@@ -3083,22 +3083,21 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate-dev-logger@^0.1.0:
-  version "0.1.27"
-  resolved "https://registry.npmjs.org/slate-dev-logger/-/slate-dev-logger-0.1.27.tgz#9fc1756c6938c35604a934e51e424330437e5b4a"
+slate-dev-logger@^0.1.26:
+  version "0.1.36"
+  resolved "https://registry.npmjs.org/slate-dev-logger/-/slate-dev-logger-0.1.36.tgz#ecdb37dbf944dfc742bab23b6a20d5a0472db95e"
 
-slate@0.24.0:
-  version "0.24.0"
-  resolved "https://registry.npmjs.org/slate/-/slate-0.24.0.tgz#281745e696ff5b91968a020c9d51a3dc7ee0295b"
+slate@0.30.0:
+  version "0.30.0"
+  resolved "https://registry.npmjs.org/slate/-/slate-0.30.0.tgz#bc369498ca74d4bc08b46b9461eec9b24aed6a7f"
   dependencies:
     debug "^2.3.2"
     direction "^0.1.5"
-    es6-map "^0.1.4"
     esrever "^0.2.0"
     is-empty "^1.0.0"
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
-    slate-dev-logger "^0.1.0"
+    slate-dev-logger "^0.1.26"
     type-of "^2.0.1"
 
 slice-ansi@0.0.4:
