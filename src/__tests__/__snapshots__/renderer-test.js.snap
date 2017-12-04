@@ -13,7 +13,10 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
           },
         ],
       },
@@ -36,7 +39,10 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
           },
         ],
       },
@@ -66,7 +72,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "checked",
               },
             ],
           },
@@ -86,7 +92,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "three",
               },
             ],
           },
@@ -112,7 +118,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -135,7 +141,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -158,7 +164,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -181,7 +187,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -204,7 +210,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -227,7 +233,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "Heading",
           },
         ],
       },
@@ -250,7 +256,10 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
           },
         ],
       },
@@ -278,7 +287,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one",
               },
             ],
           },
@@ -296,7 +305,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "two",
               },
             ],
           },
@@ -327,7 +336,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "List item that contains a blockquote with inline mark",
               },
             ],
           },
@@ -357,13 +366,94 @@ Array [
           },
         ],
       },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "leaves": Array [
+              Object {
+                "kind": "leaf",
+                "marks": Array [],
+                "text": "google",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
     ],
     "type": "paragraph",
   },
 ]
 `;
 
-exports[`parses link with encoded characters 1`] = `Array []`;
+exports[`parses link with encoded characters 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "leaves": Array [
+              Object {
+                "kind": "leaf",
+                "marks": Array [],
+                "text": "kibana",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
 
 exports[`parses link within mark 1`] = `
 Array [
@@ -372,6 +462,36 @@ Array [
     "isVoid": false,
     "kind": "block",
     "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "leaves": Array [
+              Object {
+                "kind": "leaf",
+                "marks": Array [],
+                "text": "google",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
       Object {
         "kind": "text",
         "leaves": Array [
@@ -406,7 +526,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one",
               },
             ],
           },
@@ -424,7 +544,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "two",
               },
             ],
           },
@@ -455,7 +575,18 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one ",
+              },
+              Object {
+                "kind": "leaf",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "bold",
               },
             ],
           },
@@ -472,8 +603,19 @@ Array [
             "leaves": Array [
               Object {
                 "kind": "leaf",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "italic",
+                  },
+                ],
+                "text": "italic",
+              },
+              Object {
+                "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": " two",
               },
             ],
           },
@@ -504,7 +646,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one",
               },
             ],
           },
@@ -522,7 +664,8 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "two
+-",
               },
             ],
           },
@@ -553,7 +696,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "list",
               },
             ],
           },
@@ -579,7 +722,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "another",
               },
             ],
           },
@@ -605,7 +748,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "different",
               },
             ],
           },
@@ -638,7 +781,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "todo",
               },
             ],
           },
@@ -669,7 +812,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one",
               },
             ],
           },
@@ -687,7 +830,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "two",
               },
             ],
           },
@@ -718,7 +861,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one",
               },
             ],
           },
@@ -736,7 +879,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "two",
               },
             ],
           },
@@ -754,7 +897,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "three",
               },
             ],
           },
@@ -785,7 +928,18 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "one ",
+              },
+              Object {
+                "kind": "leaf",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "bold",
               },
             ],
           },
@@ -802,8 +956,19 @@ Array [
             "leaves": Array [
               Object {
                 "kind": "leaf",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "italic",
+                  },
+                ],
+                "text": "italic",
+              },
+              Object {
+                "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": " two",
               },
             ],
           },
@@ -829,7 +994,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "This is just a sentance",
           },
         ],
       },
@@ -852,7 +1017,7 @@ Array [
           Object {
             "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": "this is a quote",
           },
         ],
       },
@@ -874,8 +1039,19 @@ Array [
         "leaves": Array [
           Object {
             "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "bold",
+              },
+            ],
+            "text": "bold",
+          },
+          Object {
+            "kind": "leaf",
             "marks": Array [],
-            "text": "",
+            "text": " in a quote",
           },
         ],
       },
@@ -910,7 +1086,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "Tables",
                   },
                 ],
               },
@@ -930,7 +1106,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "Are",
                   },
                 ],
               },
@@ -950,7 +1126,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "Cool",
                   },
                 ],
               },
@@ -978,7 +1154,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "col 1 is",
                   },
                 ],
               },
@@ -998,7 +1174,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "left-aligned",
                   },
                 ],
               },
@@ -1018,7 +1194,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "$1600",
                   },
                 ],
               },
@@ -1046,7 +1222,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "col 2 is",
                   },
                 ],
               },
@@ -1066,7 +1242,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "centered",
                   },
                 ],
               },
@@ -1086,7 +1262,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "$12",
                   },
                 ],
               },
@@ -1114,7 +1290,7 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "col 3 is",
                   },
                 ],
               },
@@ -1134,7 +1310,27 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "",
+                    "text": "right-aligned",
+                  },
+                ],
+              },
+            ],
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "$1",
                   },
                 ],
               },
@@ -1170,7 +1366,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "todo",
               },
             ],
           },
@@ -1190,7 +1386,7 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "done",
               },
             ],
           },
@@ -1222,8 +1418,14 @@ Array [
             "leaves": Array [
               Object {
                 "kind": "leaf",
-                "marks": Array [],
-                "text": "",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "deleted",
+                  },
+                ],
+                "text": "done",
               },
             ],
           },
@@ -1243,7 +1445,18 @@ Array [
               Object {
                 "kind": "leaf",
                 "marks": Array [],
-                "text": "",
+                "text": "more ",
+              },
+              Object {
+                "kind": "leaf",
+                "marks": Array [
+                  Object {
+                    "data": Object {},
+                    "kind": "mark",
+                    "type": "bold",
+                  },
+                ],
+                "text": "done",
               },
             ],
           },

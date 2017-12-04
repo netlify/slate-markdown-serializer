@@ -570,7 +570,7 @@ InlineLexer.prototype.parse = function(src) {
       src = src.substring(cap[0].length);
       out.push({
         kind: "text",
-        ranges: [
+        leaves: [
           {
             text: cap[1]
           }
@@ -600,7 +600,7 @@ InlineLexer.prototype.parse = function(src) {
       if (!link || !link.href) {
         out.push({
           kind: "text",
-          ranges: [
+          leaves: [
             {
               text: cap[0].charAt(0)
             }
@@ -694,7 +694,7 @@ function Renderer(options) {
   this.options = options || {};
 }
 
-Renderer.prototype.groupTextInRanges = function(childNode) {
+Renderer.prototype.groupTextInLeaves = function(childNode) {
   let node = flatten(childNode);
   const out = node.reduce((acc, current) => {
     let accLast = acc.length - 1;
@@ -710,12 +710,12 @@ Renderer.prototype.groupTextInRanges = function(childNode) {
         // Else, create a new text kind
         acc.push({
           kind: "text",
-          ranges: [current]
+          leaves: [current]
         });
         return acc;
       }
     } else if (current instanceof Array) {
-      return acc.concat(this.groupTextInRanges(current));
+      return acc.concat(this.groupTextInLeaves(current));
     } else {
       acc.push(current);
       return acc;
@@ -736,7 +736,7 @@ Renderer.prototype.code = function(childNode, lang) {
     kind: "block",
     type: "code",
     data,
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -744,7 +744,7 @@ Renderer.prototype.blockquote = function(childNode) {
   return {
     kind: "block",
     type: "block-quote",
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -752,7 +752,7 @@ Renderer.prototype.heading = function(childNode, level) {
   return {
     kind: "block",
     type: "heading" + level,
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -763,7 +763,7 @@ Renderer.prototype.hr = function() {
     nodes: [
       {
         kind: "text",
-        ranges: [
+        leaves: [
           {
             text: ""
           }
@@ -778,7 +778,7 @@ Renderer.prototype.list = function(childNode, style) {
   return {
     kind: "block",
     type: `${style}-list`,
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -792,7 +792,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
     kind: "block",
     type: "list-item",
     data,
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -800,7 +800,7 @@ Renderer.prototype.paragraph = function(childNode) {
   return {
     kind: "block",
     type: "paragraph",
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -827,7 +827,7 @@ Renderer.prototype.tablecell = function(childNode, flags) {
     kind: "block",
     data: { align },
     type: flags.header ? "table-head" : "table-cell",
-    nodes: this.groupTextInRanges(childNode)
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -894,7 +894,7 @@ Renderer.prototype.link = function(href, title, childNode) {
   return {
     kind: "inline",
     type: "link",
-    nodes: this.groupTextInRanges(childNode),
+    nodes: this.groupTextInLeaves(childNode),
     data: data
   };
 };
@@ -917,7 +917,7 @@ Renderer.prototype.image = function(href, title, alt) {
     nodes: [
       {
         kind: "text",
-        ranges: [
+        leaves: [
           {
             text: ""
           }
@@ -1018,7 +1018,7 @@ Parser.prototype.tok = function() {
     case "space": {
       return {
         kind: "text",
-        ranges: [
+        leaves: [
           {
             text: ""
           }
@@ -1144,7 +1144,7 @@ const MarkdownParser = {
             nodes: [
               {
                 kind: "text",
-                ranges: [
+                leaves: [
                   {
                     text: "An error occured:"
                   },

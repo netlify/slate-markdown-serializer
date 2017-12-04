@@ -194,8 +194,7 @@ class Markdown {
 
   serializeNode(node, document) {
     if (node.kind == "text") {
-      const ranges = node.getLeaves();
-      return ranges.map(this.serializeRange);
+      return node.getLeaves().map(this.serializeRange);
     }
 
     let children = node.nodes.map(node => this.serializeNode(node, document));
