@@ -704,7 +704,7 @@ Renderer.prototype.groupTextInRanges = function(childNode) {
     if (current instanceof TextNode) {
       if (lastIsText) {
         // If the previous item was a text kind, push the current text to it's range
-        acc[accLast].ranges.push(current);
+        acc[accLast].leaves.push(current);
         return acc;
       } else {
         // Else, create a new text kind
