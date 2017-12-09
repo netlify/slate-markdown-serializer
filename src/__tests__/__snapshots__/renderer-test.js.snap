@@ -105,6 +105,8 @@ Array [
 ]
 `;
 
+exports[`parses empty string 1`] = `Array []`;
+
 exports[`parses heading1 1`] = `
 Array [
   Object {
@@ -1468,3 +1470,5 @@ Array [
   },
 ]
 `;
+
+exports[`parses whitespace string 1`] = `Array []`;
