@@ -5,12 +5,12 @@
 A Markdown serializer for the [Slate Editor](http://slatejs.org). Requires Slate 0.29+.
 
 
-## Schema
+## renderMark
 
-This serializer expects your Slate nodes and marks to have the following keys (example implementations included):
+This serializer supports the following Slate marks:
 
 ```javascript
-function renderMark(props: Props) {
+function renderMark(props) {
   switch (props.mark.type) {
     case 'bold':
       return <strong>{props.children}</strong>;
@@ -29,8 +29,12 @@ function renderMark(props: Props) {
 }
 ```
 
+## renderNode
+
+This serializer supports the following Slate node keys:
+
 ```javascript
-function renderNode(props: SlateNodeProps) {
+function renderNode(props) {
   const { attributes } = props;
 
   switch (props.node.type) {
