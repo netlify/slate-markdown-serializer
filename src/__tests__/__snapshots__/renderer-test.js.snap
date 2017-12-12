@@ -67,14 +67,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "checked",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "checked",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -87,14 +95,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "three",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "three",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -284,14 +300,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -302,14 +326,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "two",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "two",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -333,14 +365,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "List item that contains a blockquote with inline mark",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "List item that contains a blockquote with inline mark",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -523,14 +563,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -541,14 +589,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "two",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "two",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -572,25 +628,33 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one ",
-              },
-              Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "bold",
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one ",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "text": "bold",
                   },
                 ],
-                "text": "bold",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -601,25 +665,33 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "italic",
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "italic",
+                      },
+                    ],
+                    "text": "italic",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": " two",
                   },
                 ],
-                "text": "italic",
-              },
-              Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": " two",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -643,14 +715,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -661,15 +741,23 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "two
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "two
 -",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -693,14 +781,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "list",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "list",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -719,14 +815,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "another",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "another",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -745,14 +849,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "different",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "different",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -778,14 +890,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "todo",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "todo",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -809,14 +929,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -827,14 +955,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "two",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "two",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -858,14 +994,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -876,14 +1020,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "two",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "two",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -894,14 +1046,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "three",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "three",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -925,25 +1085,33 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "one ",
-              },
-              Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "bold",
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "one ",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "text": "bold",
                   },
                 ],
-                "text": "bold",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -954,25 +1122,33 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "italic",
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "italic",
+                      },
+                    ],
+                    "text": "italic",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": " two",
                   },
                 ],
-                "text": "italic",
-              },
-              Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": " two",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -1363,14 +1539,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "todo",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "todo",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -1383,14 +1567,22 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "done",
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "done",
+                  },
+                ],
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -1416,20 +1608,28 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "deleted",
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "deleted",
+                      },
+                    ],
+                    "text": "done",
                   },
                 ],
-                "text": "done",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",
@@ -1442,25 +1642,33 @@ Array [
         "kind": "block",
         "nodes": Array [
           Object {
-            "kind": "text",
-            "leaves": Array [
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
               Object {
-                "kind": "leaf",
-                "marks": Array [],
-                "text": "more ",
-              },
-              Object {
-                "kind": "leaf",
-                "marks": Array [
+                "kind": "text",
+                "leaves": Array [
                   Object {
-                    "data": Object {},
-                    "kind": "mark",
-                    "type": "bold",
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "more ",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "text": "done",
                   },
                 ],
-                "text": "done",
               },
             ],
+            "type": "paragraph",
           },
         ],
         "type": "list-item",

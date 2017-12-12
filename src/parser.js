@@ -792,7 +792,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
     kind: "block",
     type: "list-item",
     data,
-    nodes: this.groupTextInLeaves(childNode)
+    nodes: [this.paragraph(childNode)]
   };
 };
 
