@@ -696,7 +696,7 @@ function Renderer(options) {
 
 Renderer.prototype.groupTextInLeaves = function(childNode) {
   let node = flatten(childNode);
-  const out = node.reduce((acc, current) => {
+  return node.reduce((acc, current) => {
     let accLast = acc.length - 1;
     let lastIsText =
       accLast >= 0 && acc[accLast] && acc[accLast]["kind"] === "text";
@@ -721,8 +721,6 @@ Renderer.prototype.groupTextInLeaves = function(childNode) {
       return acc;
     }
   }, []);
-
-  return out;
 };
 
 Renderer.prototype.code = function(childNode, lang) {
@@ -778,7 +776,7 @@ Renderer.prototype.list = function(childNode, style) {
   return {
     kind: "block",
     type: `${style}-list`,
-    nodes: this.groupTextInLeaves(childNode)
+    nodes: childNode
   };
 };
 
@@ -792,7 +790,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
     kind: "block",
     type: "list-item",
     data,
-    nodes: [this.paragraph(childNode)]
+    nodes: this.groupTextInLeaves(childNode)
   };
 };
 
@@ -1098,7 +1096,11 @@ Parser.prototype.tok = function() {
       let flags = { checked: this.token.checked };
 
       while (this.next().type !== "list_item_end") {
-        body.push(this.token.type === "text" ? this.parseText() : this.tok());
+        body.push(
+          this.token.type === "text"
+            ? this.renderer.paragraph(this.inline.parse(this.token.text))
+            : this.tok()
+        );
       }
 
       return this.renderer.listitem(body, flags);

@@ -3083,13 +3083,13 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate-dev-logger@^0.1.26:
+slate-dev-logger@^0.1.36:
   version "0.1.36"
-  resolved "https://registry.npmjs.org/slate-dev-logger/-/slate-dev-logger-0.1.36.tgz#ecdb37dbf944dfc742bab23b6a20d5a0472db95e"
+  resolved "https://registry.yarnpkg.com/slate-dev-logger/-/slate-dev-logger-0.1.36.tgz#ecdb37dbf944dfc742bab23b6a20d5a0472db95e"
 
-slate@0.30.0:
-  version "0.30.0"
-  resolved "https://registry.npmjs.org/slate/-/slate-0.30.0.tgz#bc369498ca74d4bc08b46b9461eec9b24aed6a7f"
+slate@0.31.5:
+  version "0.31.5"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.31.5.tgz#3fe2e7b63e478aaf5cadfa65f7752bb451f6a3bf"
   dependencies:
     debug "^2.3.2"
     direction "^0.1.5"
@@ -3097,7 +3097,7 @@ slate@0.30.0:
     is-empty "^1.0.0"
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
-    slate-dev-logger "^0.1.26"
+    slate-dev-logger "^0.1.36"
     type-of "^2.0.1"
 
 slice-ansi@0.0.4:

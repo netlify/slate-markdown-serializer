@@ -162,7 +162,7 @@ class Markdown {
     this.rules = [...(options.rules || []), ...RULES];
 
     this.serializeNode = this.serializeNode.bind(this);
-    this.serializeRange = this.serializeRange.bind(this);
+    this.serializeLeaves = this.serializeLeaves.bind(this);
     this.serializeString = this.serializeString.bind(this);
   }
 
@@ -194,7 +194,8 @@ class Markdown {
 
   serializeNode(node, document) {
     if (node.kind == "text") {
-      return node.getLeaves().map(this.serializeRange);
+      const leaves = node.getLeaves();
+      return leaves.map(this.serializeLeaves);
     }
 
     let children = node.nodes.map(node => this.serializeNode(node, document));
@@ -210,17 +211,17 @@ class Markdown {
   }
 
   /**
-   * Serialize a `range`.
+   * Serialize `leaves`.
    *
-   * @param {Range} range
+   * @param {Leave[]} leaves
    * @return {String}
    */
 
-  serializeRange(range) {
-    const string = new String({ text: range.text });
+  serializeLeaves(leaves) {
+    const string = new String({ text: leaves.text });
     const text = this.serializeString(string);
 
-    return range.marks.reduce((children, mark) => {
+    return leaves.marks.reduce((children, mark) => {
       for (const rule of this.rules) {
         if (!rule.serialize) continue;
         const ret = rule.serialize(mark, children);

@@ -84,6 +84,70 @@ Array [
             ],
             "type": "paragraph",
           },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "kind": "block",
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "kind": "block",
+                    "nodes": Array [
+                      Object {
+                        "kind": "text",
+                        "leaves": Array [
+                          Object {
+                            "kind": "leaf",
+                            "marks": Array [],
+                            "text": "empty",
+                          },
+                        ],
+                      },
+                    ],
+                    "type": "paragraph",
+                  },
+                ],
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": true,
+                },
+                "isVoid": false,
+                "kind": "block",
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "kind": "block",
+                    "nodes": Array [
+                      Object {
+                        "kind": "text",
+                        "leaves": Array [
+                          Object {
+                            "kind": "leaf",
+                            "marks": Array [],
+                            "text": "checked",
+                          },
+                        ],
+                      },
+                    ],
+                    "type": "paragraph",
+                  },
+                ],
+                "type": "list-item",
+              },
+            ],
+            "type": "todo-list",
+          },
         ],
         "type": "list-item",
       },
@@ -381,6 +445,35 @@ Array [
               },
             ],
             "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "Blockquote with code ",
+                  },
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "kind": "mark",
+                        "type": "code",
+                      },
+                    ],
+                    "text": "mapStateToProps()",
+                  },
+                ],
+              },
+            ],
+            "type": "block-quote",
           },
         ],
         "type": "list-item",
@@ -751,8 +844,25 @@ Array [
                   Object {
                     "kind": "leaf",
                     "marks": Array [],
-                    "text": "two
--",
+                    "text": "two",
+                  },
+                ],
+              },
+            ],
+            "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "kind": "text",
+                "leaves": Array [
+                  Object {
+                    "kind": "leaf",
+                    "marks": Array [],
+                    "text": "-",
                   },
                 ],
               },
@@ -906,6 +1016,70 @@ Array [
               },
             ],
             "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "kind": "block",
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "kind": "block",
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "kind": "block",
+                    "nodes": Array [
+                      Object {
+                        "kind": "text",
+                        "leaves": Array [
+                          Object {
+                            "kind": "leaf",
+                            "marks": Array [],
+                            "text": "nested",
+                          },
+                        ],
+                      },
+                    ],
+                    "type": "paragraph",
+                  },
+                ],
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "kind": "block",
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "kind": "block",
+                    "nodes": Array [
+                      Object {
+                        "kind": "text",
+                        "leaves": Array [
+                          Object {
+                            "kind": "leaf",
+                            "marks": Array [],
+                            "text": "deep",
+                          },
+                        ],
+                      },
+                    ],
+                    "type": "paragraph",
+                  },
+                ],
+                "type": "list-item",
+              },
+            ],
+            "type": "todo-list",
           },
         ],
         "type": "list-item",
