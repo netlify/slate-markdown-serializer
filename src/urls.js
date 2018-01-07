@@ -9,5 +9,24 @@ export function encode(href: string) {
 }
 
 export function decode(href: string) {
-  return decodeURI(href);
+  try {
+    return decodeURI(href);
+  } catch (e) {
+    return decodeSafe(href);
+  }
+}
+
+// convert hanging % characters into percentage encoded %25 as decodeURI cannot
+// handle this scenario but users may input 'invalid' urls.
+function decodeSafe(uri) {
+  const components = uri.split(/(%(?:d0|d1)%.{2})/);
+  return components
+    .map(component => {
+      try {
+        return decodeURIComponent(component);
+      } catch (e) {
+        return component.replace(/%(?!\d+)/g, "%25");
+      }
+    })
+    .join("");
 }

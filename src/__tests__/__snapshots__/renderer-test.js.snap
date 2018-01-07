@@ -590,6 +590,59 @@ Array [
 ]
 `;
 
+exports[`parses link with percent symbol 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/visualize/edit/Requests-%25",
+        },
+        "isVoid": false,
+        "kind": "inline",
+        "nodes": Array [
+          Object {
+            "kind": "text",
+            "leaves": Array [
+              Object {
+                "kind": "leaf",
+                "marks": Array [],
+                "text": "kibana",
+              },
+            ],
+          },
+        ],
+        "type": "link",
+      },
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": "",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses link within mark 1`] = `
 Array [
   Object {
