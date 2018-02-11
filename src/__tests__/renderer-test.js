@@ -5,8 +5,6 @@ const Markdown = new MarkdownRenderer();
 // at the same time and ensure that parsing / rendering is compatible.
 function getNodes(text) {
   const parsed = Markdown.deserialize(text);
-  return parsed.document.nodes;
-
   const rendered = Markdown.serialize(parsed);
   const reparsed = Markdown.deserialize(rendered);
   return reparsed.document.nodes;
@@ -87,15 +85,6 @@ test("parses list items", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
-test("parses list with trailing item", () => {
-  const text = `
-- one
-- two
--
-`;
-  expect(getNodes(text)).toMatchSnapshot();
-});
-
 test("parses indented list items", () => {
   const text = `
  - one
@@ -116,15 +105,6 @@ test("parses ordered list items", () => {
   const text = `
 1. one
 1. two
-`;
-  expect(getNodes(text)).toMatchSnapshot();
-});
-
-test("parses ordered list with trailing item", () => {
-  const text = `
-1. one
-1. two
-1.
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });
