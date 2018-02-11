@@ -69,12 +69,12 @@ const RULES = [
         case "code-line":
           return `${children}\n`;
         case "block-quote":
-          return `> ${children}\n`;
+          return `\n> ${children}\n`;
         case "todo-list":
         case "bulleted-list":
         case "ordered-list":
           if (parent === document) {
-            return children;
+            return `\n${children}`;
           }
           return `\n${children.replace(/^/gm, "   ")}`;
         case "list-item": {
@@ -131,11 +131,11 @@ const RULES = [
         case "bold":
           return `**${children}**`;
         case "italic":
-          return `*${children}*`;
+          return `_${children}_`;
         case "code":
           return `\`${children}\``;
         case "inserted":
-          return `__${children}__`;
+          return `++${children}++`;
         case "deleted":
           return `~~${children}~~`;
       }

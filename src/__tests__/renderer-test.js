@@ -1,6 +1,15 @@
 import MarkdownRenderer from "../renderer";
 const Markdown = new MarkdownRenderer();
 
+// By parsing, rendering and reparsing we can test both sides of the serializer
+// at the same time and ensure that parsing / rendering is compatible.
+function getNodes(text) {
+  const parsed = Markdown.deserialize(text);
+  const rendered = Markdown.serialize(parsed);
+  const reparsed = Markdown.deserialize(rendered);
+  return reparsed.document.nodes;
+}
+
 test("parses paragraph", () => {
   const output = Markdown.deserialize("This is just a sentance");
   expect(output.document.nodes).toMatchSnapshot();
@@ -36,20 +45,36 @@ test("parses heading6", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("bold mark", () => {
+  const text = `**this is bold**`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("italic mark", () => {
+  const text = `*this is italic* _this is italic too_`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("deleted mark", () => {
+  const text = `~~this is strikethrough~~`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("inserted mark", () => {
+  const text = `++inserted text++`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("code mark", () => {
+  const text = "`const foo = 123;`";
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses quote", () => {
   const text = `
 > this is a quote
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
-});
-
-test("parses quote with marks", () => {
-  const text = `
-> **bold** in a quote
-`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses list items", () => {
@@ -57,18 +82,7 @@ test("parses list items", () => {
 - one
 - two
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
-});
-
-test("parses list with trailing item", () => {
-  const text = `
-- one
-- two
--
-`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses indented list items", () => {
@@ -76,8 +90,7 @@ test("parses indented list items", () => {
  - one
  - two
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses list items with marks", () => {
@@ -85,8 +98,7 @@ test("parses list items with marks", () => {
  - one **bold**
  - *italic* two
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses ordered list items", () => {
@@ -94,8 +106,7 @@ test("parses ordered list items", () => {
 1. one
 1. two
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses ordered list items with marks", () => {
@@ -103,8 +114,7 @@ test("parses ordered list items with marks", () => {
 1. one **bold**
 1. *italic* two
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses ordered list items with different numbers", () => {
@@ -113,8 +123,7 @@ test("parses ordered list items with different numbers", () => {
 2. two
 3. three
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses mixed list items", () => {
@@ -125,8 +134,7 @@ test("parses mixed list items", () => {
 
 1. different
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses tables", () => {
@@ -137,11 +145,7 @@ test("parses tables", () => {
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
 `;
-
-  const output = Markdown.deserialize(text);
-  const result = Markdown.serialize(output);
-  const output2 = Markdown.deserialize(result);
-  expect(output2.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses todo list items", () => {
@@ -149,8 +153,7 @@ test("parses todo list items", () => {
 [ ] todo
 [x] done
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses nested todo list items", () => {
@@ -159,8 +162,7 @@ test("parses nested todo list items", () => {
    [ ] nested
    [ ] deep
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses double nested todo list items", () => {
@@ -171,8 +173,7 @@ test("parses double nested todo list items", () => {
 
 [ ] three
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses todo list items with marks", () => {
@@ -180,8 +181,7 @@ test("parses todo list items with marks", () => {
  [x] ~~done~~
  [x] more **done**
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses ``` code fences", () => {
@@ -193,8 +193,7 @@ function() {
 }
 \`\`\`
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses ~~~ code fences", () => {
@@ -206,8 +205,7 @@ function() {
 }
 ~~~
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses indented code blocks", () => {
@@ -217,50 +215,42 @@ test("parses indented code blocks", () => {
       return hello;
     }
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses link", () => {
   const text = `[google](http://google.com)`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses link within mark", () => {
   const text = `**[google](http://google.com)**`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses link with encoded characters", () => {
   const text = `[kibana](https://example.com/app/kibana#/discover?_g=%28refreshInterval:%28%27$$hashKey%27:%27object:1596%27,display:%2710%20seconds%27,pause:!f,section:1,value:10000%29,time:%28from:now-15m,mode:quick,to:now%29%29&_a=%28columns:!%28metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url%29,index:%27logs-%27,interval:auto,query:%28query_string:%28analyze_wildcard:!t,query:%27metadata.at:%20Stepper*%27%29%29,sort:!%28time,desc%29%29)`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses link with percent symbol", () => {
   const text = `[kibana](https://example.com/app/kibana#/visualize/edit/Requests-%)`;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses interesting nesting", () => {
   const text = `
 * List item that contains a blockquote with inline mark
 
-  >Blockquote with code \`mapStateToProps()\`
+  > Blockquote with code \`mapStateToProps()\`
 `;
-  const output = Markdown.deserialize(text);
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses empty string", () => {
-  const output = Markdown.deserialize("");
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes("")).toMatchSnapshot();
 });
 
 test("parses whitespace string", () => {
-  const output = Markdown.deserialize("   ");
-  expect(output.document.nodes).toMatchSnapshot();
+  expect(getNodes("   ")).toMatchSnapshot();
 });

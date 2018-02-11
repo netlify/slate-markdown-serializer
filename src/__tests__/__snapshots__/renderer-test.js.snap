@@ -1,5 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`bold mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "bold",
+              },
+            ],
+            "text": "this is bold",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`code mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "code",
+              },
+            ],
+            "text": "const foo = 123;",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`deleted mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "deleted",
+              },
+            ],
+            "text": "this is strikethrough",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`inserted mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "inserted",
+              },
+            ],
+            "text": "inserted text",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`italic mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "kind": "block",
+    "nodes": Array [
+      Object {
+        "kind": "text",
+        "leaves": Array [
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "italic",
+              },
+            ],
+            "text": "this is italic",
+          },
+          Object {
+            "kind": "leaf",
+            "marks": Array [],
+            "text": " ",
+          },
+          Object {
+            "kind": "leaf",
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "kind": "mark",
+                "type": "italic",
+              },
+            ],
+            "text": "this is italic too",
+          },
+        ],
+      },
+    ],
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses \`\`\` code fences 1`] = `
 Array [
   Object {
@@ -848,89 +1009,6 @@ Array [
 ]
 `;
 
-exports[`parses list with trailing item 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "kind": "block",
-    "nodes": Array [
-      Object {
-        "data": Object {},
-        "isVoid": false,
-        "kind": "block",
-        "nodes": Array [
-          Object {
-            "data": Object {},
-            "isVoid": false,
-            "kind": "block",
-            "nodes": Array [
-              Object {
-                "kind": "text",
-                "leaves": Array [
-                  Object {
-                    "kind": "leaf",
-                    "marks": Array [],
-                    "text": "one",
-                  },
-                ],
-              },
-            ],
-            "type": "paragraph",
-          },
-        ],
-        "type": "list-item",
-      },
-      Object {
-        "data": Object {},
-        "isVoid": false,
-        "kind": "block",
-        "nodes": Array [
-          Object {
-            "data": Object {},
-            "isVoid": false,
-            "kind": "block",
-            "nodes": Array [
-              Object {
-                "kind": "text",
-                "leaves": Array [
-                  Object {
-                    "kind": "leaf",
-                    "marks": Array [],
-                    "text": "two",
-                  },
-                ],
-              },
-            ],
-            "type": "paragraph",
-          },
-          Object {
-            "data": Object {},
-            "isVoid": false,
-            "kind": "block",
-            "nodes": Array [
-              Object {
-                "kind": "text",
-                "leaves": Array [
-                  Object {
-                    "kind": "leaf",
-                    "marks": Array [],
-                    "text": "-",
-                  },
-                ],
-              },
-            ],
-            "type": "paragraph",
-          },
-        ],
-        "type": "list-item",
-      },
-    ],
-    "type": "bulleted-list",
-  },
-]
-`;
-
 exports[`parses mixed list items 1`] = `
 Array [
   Object {
@@ -1423,40 +1501,6 @@ Array [
             "kind": "leaf",
             "marks": Array [],
             "text": "this is a quote",
-          },
-        ],
-      },
-    ],
-    "type": "block-quote",
-  },
-]
-`;
-
-exports[`parses quote with marks 1`] = `
-Array [
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "kind": "block",
-    "nodes": Array [
-      Object {
-        "kind": "text",
-        "leaves": Array [
-          Object {
-            "kind": "leaf",
-            "marks": Array [
-              Object {
-                "data": Object {},
-                "kind": "mark",
-                "type": "bold",
-              },
-            ],
-            "text": "bold",
-          },
-          Object {
-            "kind": "leaf",
-            "marks": Array [],
-            "text": " in a quote",
           },
         ],
       },
