@@ -1,6 +1,6 @@
 // to ensure markdown compatability we need to specifically encode some characters
-export function encode(href: string) {
-  return href
+export function encode(href) {
+  return decodeSafe(href)
     .trim()
     .replace(/ /g, "%20")
     .replace(/'/g, "%27")

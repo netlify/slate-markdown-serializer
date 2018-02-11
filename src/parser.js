@@ -325,6 +325,7 @@ Lexer.prototype.token = function(src, top, bq) {
         let checked = todo ? !!item.match(/^ *(\[x\])/) : undefined;
         space = item.length;
         item = item.replace(/^ *([*+-]|\d+\.|\[[x\s]\]) +/, "");
+        console.log(item);
 
         // Outdent whatever the
         // list item contains. Hacky.
