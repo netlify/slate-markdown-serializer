@@ -2,7 +2,7 @@
 
 # Slate Markdown Serializer
 
-A Markdown serializer for the [Slate Editor](http://slatejs.org). Requires Slate 0.29+.
+A Markdown serializer for the [Slate Editor](http://slatejs.org). Requires Slate 0.32+.
 
 
 ## renderMark
