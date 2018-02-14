@@ -569,7 +569,7 @@ InlineLexer.prototype.parse = function(src) {
     if ((cap = this.rules.escape.exec(src))) {
       src = src.substring(cap[0].length);
       out.push({
-        kind: "text",
+        object: "text",
         leaves: [
           {
             text: cap[1]
@@ -599,7 +599,7 @@ InlineLexer.prototype.parse = function(src) {
       link = this.links[link.toLowerCase()];
       if (!link || !link.href) {
         out.push({
-          kind: "text",
+          object: "text",
           leaves: [
             {
               text: cap[0].charAt(0)
@@ -699,17 +699,17 @@ Renderer.prototype.groupTextInLeaves = function(childNode) {
   return node.reduce((acc, current) => {
     let accLast = acc.length - 1;
     let lastIsText =
-      accLast >= 0 && acc[accLast] && acc[accLast]["kind"] === "text";
+      accLast >= 0 && acc[accLast] && acc[accLast]["object"] === "text";
 
     if (current instanceof TextNode) {
       if (lastIsText) {
-        // If the previous item was a text kind, push the current text to it's range
+        // If the previous item was a text object, push the current text to it's range
         acc[accLast].leaves.push(current);
         return acc;
       } else {
-        // Else, create a new text kind
+        // Else, create a new text object
         acc.push({
-          kind: "text",
+          object: "text",
           leaves: [current]
         });
         return acc;
@@ -731,7 +731,7 @@ Renderer.prototype.code = function(childNode, lang) {
   }
 
   return {
-    kind: "block",
+    object: "block",
     type: "code",
     data,
     nodes: this.groupTextInLeaves(childNode)
@@ -740,7 +740,7 @@ Renderer.prototype.code = function(childNode, lang) {
 
 Renderer.prototype.blockquote = function(childNode) {
   return {
-    kind: "block",
+    object: "block",
     type: "block-quote",
     nodes: this.groupTextInLeaves(childNode)
   };
@@ -748,7 +748,7 @@ Renderer.prototype.blockquote = function(childNode) {
 
 Renderer.prototype.heading = function(childNode, level) {
   return {
-    kind: "block",
+    object: "block",
     type: "heading" + level,
     nodes: this.groupTextInLeaves(childNode)
   };
@@ -756,11 +756,11 @@ Renderer.prototype.heading = function(childNode, level) {
 
 Renderer.prototype.hr = function() {
   return {
-    kind: "block",
+    object: "block",
     type: "horizontal-rule",
     nodes: [
       {
-        kind: "text",
+        object: "text",
         leaves: [
           {
             text: ""
@@ -774,7 +774,7 @@ Renderer.prototype.hr = function() {
 
 Renderer.prototype.list = function(childNode, style) {
   return {
-    kind: "block",
+    object: "block",
     type: `${style}-list`,
     nodes: childNode
   };
@@ -787,7 +787,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
   }
 
   return {
-    kind: "block",
+    object: "block",
     type: "list-item",
     data,
     nodes: this.groupTextInLeaves(childNode)
@@ -796,7 +796,7 @@ Renderer.prototype.listitem = function(childNode, flags = {}) {
 
 Renderer.prototype.paragraph = function(childNode) {
   return {
-    kind: "block",
+    object: "block",
     type: "paragraph",
     nodes: this.groupTextInLeaves(childNode)
   };
@@ -804,7 +804,7 @@ Renderer.prototype.paragraph = function(childNode) {
 
 Renderer.prototype.table = function(childNode) {
   return {
-    kind: "block",
+    object: "block",
     type: "table",
     nodes: childNode
   };
@@ -812,7 +812,7 @@ Renderer.prototype.table = function(childNode) {
 
 Renderer.prototype.tablerow = function(childNode) {
   return {
-    kind: "block",
+    object: "block",
     type: "table-row",
     nodes: childNode
   };
@@ -822,7 +822,7 @@ Renderer.prototype.tablecell = function(childNode, flags) {
   const align = flags.align;
 
   return {
-    kind: "block",
+    object: "block",
     data: { align },
     type: flags.header ? "table-head" : "table-cell",
     nodes: this.groupTextInLeaves(childNode)
@@ -890,7 +890,7 @@ Renderer.prototype.link = function(href, title, childNode) {
     data.title = title;
   }
   return {
-    kind: "inline",
+    object: "inline",
     type: "link",
     nodes: this.groupTextInLeaves(childNode),
     data: data
@@ -910,11 +910,11 @@ Renderer.prototype.image = function(href, title, alt) {
   }
 
   return {
-    kind: "block",
+    object: "block",
     type: "image",
     nodes: [
       {
-        kind: "text",
+        object: "text",
         leaves: [
           {
             text: ""
@@ -1015,7 +1015,7 @@ Parser.prototype.tok = function() {
   switch (this.token.type) {
     case "space": {
       return {
-        kind: "text",
+        object: "text",
         leaves: [
           {
             text: ""
@@ -1141,11 +1141,11 @@ const MarkdownParser = {
       if (options.silent) {
         fragment = [
           {
-            kind: "block",
+            object: "block",
             type: "paragraph",
             nodes: [
               {
-                kind: "text",
+                object: "text",
                 leaves: [
                   {
                     text: "An error occured:"

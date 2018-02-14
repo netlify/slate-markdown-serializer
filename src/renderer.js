@@ -4,7 +4,7 @@ import { Record } from "immutable";
 import { encode } from "./urls";
 
 const String = new Record({
-  kind: "string",
+  object: "string",
   text: ""
 });
 
@@ -19,14 +19,14 @@ let tableHeader = "";
 const RULES = [
   {
     serialize(obj, children) {
-      if (obj.kind === "string") {
+      if (obj.object === "string") {
         return children;
       }
     }
   },
   {
     serialize(obj, children, document) {
-      if (obj.kind !== "block") return;
+      if (obj.object !== "block") return;
       let parent = document.getParent(obj.key);
 
       switch (obj.type) {
@@ -115,7 +115,7 @@ const RULES = [
   },
   {
     serialize(obj, children) {
-      if (obj.kind !== "inline") return;
+      if (obj.object !== "inline") return;
       switch (obj.type) {
         case "link":
           const href = encode(obj.getIn(["data", "href"]) || "");
@@ -126,7 +126,7 @@ const RULES = [
   // Add a new rule that handles marks...
   {
     serialize(obj, children) {
-      if (obj.kind !== "mark") return;
+      if (obj.object !== "mark") return;
       switch (obj.type) {
         case "bold":
           return `**${children}**`;
@@ -193,7 +193,7 @@ class Markdown {
    */
 
   serializeNode(node, document) {
-    if (node.kind == "text") {
+    if (node.object == "text") {
       const leaves = node.getLeaves();
       return leaves.map(this.serializeLeaves);
     }
