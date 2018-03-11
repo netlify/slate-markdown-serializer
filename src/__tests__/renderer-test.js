@@ -11,8 +11,17 @@ function getNodes(text) {
 }
 
 test("parses paragraph", () => {
-  const output = Markdown.deserialize("This is just a sentance");
-  expect(output.document.nodes).toMatchSnapshot();
+  const text = "This is just a sentance";
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("parses empty paragraphs", () => {
+  const text = `
+This is the first sentance
+
+This is the second sentance
+`;
+  expect(getNodes(text)).toMatchSnapshot();
 });
 
 test("parses heading1", () => {

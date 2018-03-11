@@ -423,12 +423,17 @@ Lexer.prototype.token = function(src, top, bq) {
     // top-level paragraph
     if (top && (cap = this.rules.paragraph.exec(src))) {
       src = src.substring(cap[0].length);
+      const endsWithNewline = cap[1].charAt(cap[1].length - 1) === "\n";
       this.tokens.push({
         type: "paragraph",
-        text: cap[1].charAt(cap[1].length - 1) === "\n"
-          ? cap[1].slice(0, -1)
-          : cap[1]
+        text: endsWithNewline ? cap[1].slice(0, -1) : cap[1]
       });
+      if (endsWithNewline) {
+        this.tokens.push({
+          type: "paragraph",
+          text: ""
+        });
+      }
       continue;
     }
 
