@@ -1,6 +1,6 @@
 {
   "name": "slate-md-serializer",
-  "version": "3.0.0-pre",
+  "version": "3.0.0-pre.1",
   "description": "",
   "main": "lib/renderer.js",
   "scripts": {
