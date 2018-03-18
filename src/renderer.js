@@ -67,7 +67,7 @@ const RULES = [
         case "code-line":
           return `${children}\n`;
         case "block-quote":
-          return `\n> ${children}`;
+          return `> ${children}`;
         case "todo-list":
         case "bulleted-list":
         case "ordered-list":

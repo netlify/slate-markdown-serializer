@@ -6,7 +6,6 @@ const Markdown = new MarkdownRenderer();
 function getNodes(text) {
   const parsed = Markdown.deserialize(text);
   const rendered = Markdown.serialize(parsed);
-  console.log(rendered);
   const reparsed = Markdown.deserialize(rendered);
   return reparsed.document.nodes;
 }
@@ -320,14 +319,6 @@ test("parses link with encoded characters", () => {
 
 test("parses link with percent symbol", () => {
   const text = `[kibana](https://example.com/app/kibana#/visualize/edit/Requests-%)`;
-  expect(getNodes(text)).toMatchSnapshot();
-});
-
-test("parses interesting nesting", () => {
-  const text = `
-* List item that contains a blockquote with inline mark
-  > Blockquote with code \`mapStateToProps()\`
-`;
   expect(getNodes(text)).toMatchSnapshot();
 });
 
