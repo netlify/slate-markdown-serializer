@@ -59,11 +59,7 @@ const RULES = [
         case "table-cell":
           return `| ${children} `;
         case "paragraph":
-          if (parent.type === "list-item") {
-            return children;
-          } else {
-            return `\n${children}\n`;
-          }
+          return children;
         case "code":
           return `\`\`\`\n${children}\n\`\`\`\n`;
         case "code-line":
@@ -74,7 +70,7 @@ const RULES = [
         case "bulleted-list":
         case "ordered-list":
           if (parent === document) {
-            return `\n${children}`;
+            return children;
           }
           return `\n${children.replace(/^/gm, "   ")}`;
         case "list-item": {

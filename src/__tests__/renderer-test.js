@@ -15,11 +15,21 @@ test("parses paragraph", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
-test("parses empty paragraphs", () => {
+test("parses two paragraphs", () => {
   const text = `
 This is the first sentance
 
 This is the second sentance
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("maintains multiple empty paragraphs", () => {
+  const text = `
+This is the first sentance
+
+
+Two empty paragraphs above
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });
@@ -90,6 +100,17 @@ test("parses list items", () => {
   const text = `
 - one
 - two
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("does not add extra paragraphs around lists", () => {
+  const text = `
+first paragraph
+
+- list
+
+second paragraph
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });

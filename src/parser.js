@@ -58,7 +58,7 @@ var block = {
   blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*\n*)+/,
   list: /^( *)(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
   def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n+|$)/,
-  paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|def))+)\n*/,
+  paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
   text: /^[^\n]+/
 };
 
@@ -179,15 +179,21 @@ Lexer.prototype.token = function(src, top, bq) {
   var l;
 
   src = src.replace(/^ +$/gm, "");
+  src = src.replace(/^\n/, "");
 
   while (src) {
     // newline
     if ((cap = this.rules.newline.exec(src))) {
       src = src.substring(cap[0].length);
-      if (cap[0].length > 1) {
-        this.tokens.push({
-          type: "space"
-        });
+      const newlines = cap[0].length;
+
+      if (top) {
+        for (let i = 0; i < newlines; i++) {
+          this.tokens.push({
+            type: "paragraph",
+            text: ""
+          });
+        }
       }
     }
 
@@ -372,6 +378,13 @@ Lexer.prototype.token = function(src, top, bq) {
       this.tokens.push({
         type: "list_end"
       });
+
+      if (src.match(/\n$/)) {
+        this.tokens.push({
+          type: "paragraph",
+          text: ""
+        });
+      }
 
       continue;
     }
