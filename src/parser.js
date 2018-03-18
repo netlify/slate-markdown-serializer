@@ -379,14 +379,6 @@ Lexer.prototype.token = function(src, top, bq) {
         type: "list_end"
       });
 
-      // TODO: Make lists not greedy about newlines
-      // if (src.match(/\n$/)) {
-      //   this.tokens.push({
-      //     type: "paragraph",
-      //     text: ""
-      //   });
-      // }
-
       continue;
     }
 
