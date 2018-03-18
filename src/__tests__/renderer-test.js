@@ -6,6 +6,7 @@ const Markdown = new MarkdownRenderer();
 function getNodes(text) {
   const parsed = Markdown.deserialize(text);
   const rendered = Markdown.serialize(parsed);
+  console.log(rendered);
   const reparsed = Markdown.deserialize(rendered);
   return reparsed.document.nodes;
 }
@@ -64,6 +65,24 @@ test("parses heading6", () => {
   expect(output.document.nodes).toMatchSnapshot();
 });
 
+test("headings are not greedy about newlines", () => {
+  const text = `
+# Heading
+
+a paragraph
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("parses horizontal rule", () => {
+  const text = `
+---
+
+a paragraph
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("bold mark", () => {
   const text = `**this is bold**`;
   expect(getNodes(text)).toMatchSnapshot();
@@ -92,6 +111,15 @@ test("code mark", () => {
 test("parses quote", () => {
   const text = `
 > this is a quote
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("quote is not greedy about newlines", () => {
+  const text = `
+> this is a quote
+
+this is a paragraph
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });
@@ -178,6 +206,17 @@ test("parses tables", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("tables are not greedy about newlines", () => {
+  const text = `
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+
+a new paragraph
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses todo list items", () => {
   const text = `
 [ ] todo
@@ -222,6 +261,22 @@ function() {
   return hello;
 }
 \`\`\`
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("code is not greedy about newlines", () => {
+  const text = `
+one sentance
+
+\`\`\`
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`
+
+two sentance
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });
@@ -271,7 +326,6 @@ test("parses link with percent symbol", () => {
 test("parses interesting nesting", () => {
   const text = `
 * List item that contains a blockquote with inline mark
-
   > Blockquote with code \`mapStateToProps()\`
 `;
   expect(getNodes(text)).toMatchSnapshot();

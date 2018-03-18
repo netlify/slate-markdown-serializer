@@ -51,13 +51,13 @@ var block = {
   newline: /^\n+/,
   code: /^( {4}[^\n]+\n*)+/,
   fences: noop,
-  hr: /^( *[-*_]){3,} *(?:\n+|$)/,
-  heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n+|$)/,
+  hr: /^( *[-*_]){3,} *(?:\n|$)/,
+  heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n|$)/,
   nptable: noop,
-  lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n+|$)/,
-  blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*\n*)+/,
-  list: /^( *)(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
-  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n+|$)/,
+  lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n|$)/,
+  blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*(?:\n|$))+/,
+  list: /^( *)(bull) [\s\S]+?(?:hr|def|\n(?! )(?!\1bull )\n|\s*$)/,
+  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n|$)/,
   paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
   text: /^[^\n]+/
 };
@@ -92,9 +92,9 @@ block.normal = assign({}, block);
  */
 
 block.gfm = assign({}, block.normal, {
-  fences: /^ *(`{3,}|~{3,})[ \.]*(\S+)? *\n([\s\S]+?)\s*\1 *(?:\n+|$)/,
+  fences: /^ *(`{3,}|~{3,})[ \.]*(\S+)? *\n([\s\S]+?)\s*\1 *(?:\n|$)/,
   paragraph: /^/,
-  heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n+|$)/
+  heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n|$)/
 });
 
 block.gfm.paragraph = replace(block.paragraph)(
@@ -111,8 +111,8 @@ block.gfm.paragraph = replace(block.paragraph)(
  */
 
 block.tables = assign({}, block.gfm, {
-  nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
-  table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/
+  nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)/,
+  table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)/
 });
 
 /**
@@ -379,12 +379,13 @@ Lexer.prototype.token = function(src, top, bq) {
         type: "list_end"
       });
 
-      if (src.match(/\n$/)) {
-        this.tokens.push({
-          type: "paragraph",
-          text: ""
-        });
-      }
+      // TODO: Make lists not greedy about newlines
+      // if (src.match(/\n$/)) {
+      //   this.tokens.push({
+      //     type: "paragraph",
+      //     text: ""
+      //   });
+      // }
 
       continue;
     }
@@ -776,16 +777,6 @@ Renderer.prototype.hr = function() {
   return {
     object: "block",
     type: "horizontal-rule",
-    nodes: [
-      {
-        object: "text",
-        leaves: [
-          {
-            text: ""
-          }
-        ]
-      }
-    ],
     isVoid: true
   };
 };

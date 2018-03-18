@@ -32,7 +32,9 @@ const RULES = [
       switch (obj.type) {
         case "table":
           tableHeader = "";
-          return children;
+
+          // trim removes trailing newline
+          return children.trim();
         case "table-head": {
           switch (obj.getIn(["data", "align"])) {
             case "left":
@@ -61,11 +63,11 @@ const RULES = [
         case "paragraph":
           return children;
         case "code":
-          return `\`\`\`\n${children}\n\`\`\`\n`;
+          return `\`\`\`\n${children}\n\`\`\``;
         case "code-line":
           return `${children}\n`;
         case "block-quote":
-          return `\n> ${children}\n`;
+          return `\n> ${children}`;
         case "todo-list":
         case "bulleted-list":
         case "ordered-list":
@@ -101,11 +103,11 @@ const RULES = [
         case "heading6":
           return `###### ${children}`;
         case "horizontal-rule":
-          return `---\n`;
+          return `---`;
         case "image":
           const alt = obj.getIn(["data", "alt"]);
           const src = encode(obj.getIn(["data", "src"]) || "");
-          return `![${alt}](${src})\n`;
+          return `![${alt}](${src})`;
       }
     }
   },
