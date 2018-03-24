@@ -114,6 +114,15 @@ test("parses quote", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("quotes do not get combined", () => {
+  const text = `
+> this is a quote
+
+> this is a different quote
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("quote is not greedy about newlines", () => {
   const text = `
 > this is a quote

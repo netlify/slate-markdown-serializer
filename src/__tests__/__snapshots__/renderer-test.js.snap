@@ -2540,6 +2540,65 @@ Array [
 ]
 `;
 
+exports[`quotes do not get combined 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a different quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+]
+`;
+
 exports[`tables are not greedy about newlines 1`] = `
 Array [
   Object {
