@@ -222,6 +222,12 @@ Lexer.prototype.token = function(src, top, bq) {
     // heading
     if ((cap = this.rules.heading.exec(src))) {
       src = src.substring(cap[0].length);
+
+      const last = this.tokens[this.tokens.length - 1];
+      if (last && last.type === "paragraph" && last.text === "") {
+        this.tokens.splice(-1, 1);
+      }
+
       this.tokens.push({
         type: "heading",
         depth: cap[1].length,

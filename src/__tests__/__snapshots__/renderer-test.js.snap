@@ -325,6 +325,24 @@ Array [
           Object {
             "marks": Array [],
             "object": "leaf",
+            "text": "a paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
             "text": "Heading",
           },
         ],
@@ -343,25 +361,7 @@ Array [
           Object {
             "marks": Array [],
             "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
-    ],
-    "object": "block",
-    "type": "paragraph",
-  },
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "nodes": Array [
-      Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "a paragraph",
+            "text": "another paragraph",
           },
         ],
         "object": "text",

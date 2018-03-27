@@ -66,10 +66,11 @@ test("parses heading6", () => {
 
 test("headings are not greedy about newlines", () => {
   const text = `
+a paragraph
+
 # Heading
 
-
-a paragraph
+another paragraph
 `;
   expect(getNodes(text)).toMatchSnapshot();
 });
