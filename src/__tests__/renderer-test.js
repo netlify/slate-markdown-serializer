@@ -68,7 +68,7 @@ test("headings are not greedy about newlines", () => {
   const text = `
 a paragraph
 
-# Heading
+## Heading
 
 another paragraph
 `;
