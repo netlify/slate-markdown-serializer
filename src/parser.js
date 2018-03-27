@@ -94,7 +94,7 @@ block.normal = assign({}, block);
 block.gfm = assign({}, block.normal, {
   fences: /^ *(`{3,}|~{3,})[ \.]*(\S+)? *\n([\s\S]+?)\s*\1 *(?:\n|$)/,
   paragraph: /^/,
-  heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n|$)/
+  heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n{1,2}|$)/
 });
 
 block.gfm.paragraph = replace(block.paragraph)(

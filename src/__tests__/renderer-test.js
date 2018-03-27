@@ -68,6 +68,7 @@ test("headings are not greedy about newlines", () => {
   const text = `
 # Heading
 
+
 a paragraph
 `;
   expect(getNodes(text)).toMatchSnapshot();

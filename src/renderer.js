@@ -89,19 +89,19 @@ const RULES = [
           }
         }
         case "heading1":
-          return `# ${children}`;
+          return `# ${children}\n`;
         case "heading2":
-          return `## ${children}`;
+          return `## ${children}\n`;
         case "heading3":
-          return `### ${children}`;
+          return `### ${children}\n`;
         case "heading4":
-          return `#### ${children}`;
+          return `#### ${children}\n`;
         case "heading5":
-          return `##### ${children}`;
+          return `##### ${children}\n`;
         case "heading6":
-          return `###### ${children}`;
+          return `###### ${children}\n`;
         case "heading6":
-          return `###### ${children}`;
+          return `###### ${children}\n`;
         case "horizontal-rule":
           return `---`;
         case "image":
