@@ -117,7 +117,7 @@ const RULES = [
       switch (obj.type) {
         case "link":
           const href = encode(obj.getIn(["data", "href"]) || "");
-          return `[${children.trim()}](${href})`;
+          return href ? `[${children.trim()}](${href})` : children.trim();
       }
     }
   },

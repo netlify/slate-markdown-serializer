@@ -333,6 +333,11 @@ test("parses link with percent symbol", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("ignores empty link", () => {
+  const text = `[empty]()`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses empty string", () => {
   expect(getNodes("")).toMatchSnapshot();
 });
