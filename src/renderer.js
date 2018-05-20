@@ -236,9 +236,12 @@ class Markdown {
    */
 
   serializeString(string) {
+    // escape markdown characters
+    const text = string.text.replace(/([\\`*{}\[\]()#+\-.!_>])/gi, "\\$1");
+
     for (const rule of this.rules) {
       if (!rule.serialize) continue;
-      const ret = rule.serialize(string, string.text);
+      const ret = rule.serialize(string, text);
       if (ret) return ret;
     }
   }

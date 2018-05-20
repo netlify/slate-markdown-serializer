@@ -345,3 +345,16 @@ test("parses empty string", () => {
 test("parses whitespace string", () => {
   expect(getNodes("   ")).toMatchSnapshot();
 });
+
+test("handles escaped blocks", () => {
+  expect(getNodes("\\# text")).toMatchSnapshot();
+  expect(getNodes("\\- text")).toMatchSnapshot();
+  expect(getNodes("\\* text")).toMatchSnapshot();
+});
+
+test("handles escaped marks", () => {
+  expect(getNodes("this is \\*\\*not bold\\*\\*")).toMatchSnapshot();
+  expect(getNodes("this is \\*not italic\\*")).toMatchSnapshot();
+  expect(getNodes("this is \\[not\\]\\(a link\\)")).toMatchSnapshot();
+  expect(getNodes("this is \\!\\[not\\]\\(an image\\)")).toMatchSnapshot();
+});
