@@ -109,6 +109,11 @@ test("code mark", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("code mark with escaped characters", () => {
+  const text = "`<script>alert('foo')</script>`";
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses quote", () => {
   const text = `
 > this is a quote
