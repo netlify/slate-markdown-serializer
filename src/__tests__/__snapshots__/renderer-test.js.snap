@@ -1201,6 +1201,40 @@ Array [
 ]
 `;
 
+exports[`parses image 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "alt": "example",
+          "src": "http://example.com/logo.png",
+        },
+        "isVoid": true,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": " ",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "image",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
 exports[`parses indented code blocks 1`] = `
 Array [
   Object {

@@ -318,6 +318,11 @@ test("parses indented code blocks", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("parses image", () => {
+  const text = `![example](http://example.com/logo.png)`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses link", () => {
   const text = `[google](http://google.com)`;
   expect(getNodes(text)).toMatchSnapshot();
