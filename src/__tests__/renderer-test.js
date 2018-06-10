@@ -147,6 +147,16 @@ test("parses list items", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("parses nested list items", () => {
+  const text = `
+* one
+* two
+   * nested
+
+next para`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("does not add extra paragraphs around lists", () => {
   const text = `
 first paragraph

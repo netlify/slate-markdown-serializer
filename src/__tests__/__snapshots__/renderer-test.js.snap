@@ -932,24 +932,6 @@ Array [
     "isVoid": false,
     "nodes": Array [
       Object {
-        "leaves": Array [
-          Object {
-            "marks": Array [],
-            "object": "leaf",
-            "text": "",
-          },
-        ],
-        "object": "text",
-      },
-    ],
-    "object": "block",
-    "type": "paragraph",
-  },
-  Object {
-    "data": Object {},
-    "isVoid": false,
-    "nodes": Array [
-      Object {
         "data": Object {
           "checked": false,
         },
@@ -1793,6 +1775,123 @@ Array [
     ],
     "object": "block",
     "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses nested list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {},
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "nested",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+            ],
+            "object": "block",
+            "type": "bulleted-list",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "next para",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
   },
 ]
 `;

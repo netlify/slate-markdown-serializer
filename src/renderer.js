@@ -70,11 +70,15 @@ const RULES = [
           return `> ${children}`;
         case "todo-list":
         case "bulleted-list":
-        case "ordered-list":
+        case "ordered-list": {
+          // root list
           if (parent === document) {
             return children;
           }
-          return `\n${children.replace(/^/gm, "   ")}`;
+
+          // nested list
+          return `\n${children.replace(/\n+$/gm, "").replace(/^/gm, "   ")}`;
+        }
         case "list-item": {
           switch (parent.type) {
             case "ordered-list":
