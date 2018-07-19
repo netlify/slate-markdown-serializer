@@ -109,7 +109,7 @@ const RULES = [
         case "horizontal-rule":
           return `---`;
         case "image":
-          const alt = obj.getIn(["data", "alt"]);
+          const alt = obj.getIn(["data", "alt"]) || "";
           const src = encode(obj.getIn(["data", "src"]) || "");
           return `![${alt}](${src})`;
       }

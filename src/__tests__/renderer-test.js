@@ -18,6 +18,14 @@ test("parses paragraph", () => {
 test("parses two paragraphs", () => {
   const text = `
 This is the first sentance
+This is the second sentance
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("parses two paragraphs", () => {
+  const text = `
+This is the first sentance
 
 This is the second sentance
 `;

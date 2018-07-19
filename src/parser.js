@@ -58,7 +58,7 @@ var block = {
   blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*(?:\n|$))+/,
   list: /^( *)(bull) [\s\S]+?(?:hr|def|\n(?! )(?!\1bull )\n|\s*$)/,
   def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n|$)/,
-  paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
+  paragraph: /^((?:[^\n]+(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
   text: /^[^\n]+/
 };
 
@@ -718,7 +718,7 @@ Renderer.prototype.groupTextInLeaves = function(childNode) {
     let lastIsText =
       accLast >= 0 && acc[accLast] && acc[accLast]["object"] === "text";
 
-    if (current instanceof TextNode) {
+    if (current.text) {
       if (lastIsText) {
         // If the previous item was a text object, push the current text to it's range
         acc[accLast].leaves.push(current);
@@ -860,11 +860,16 @@ Renderer.prototype.em = function(childNode) {
 };
 
 Renderer.prototype.codespan = function(text) {
-  return new TextNode(text, { type: "code" });
+  return {
+    text,
+    marks: [{ type: "code" }]
+  };
 };
 
 Renderer.prototype.br = function() {
-  return new TextNode("");
+  return {
+    text: " "
+  };
 };
 
 Renderer.prototype.del = function(childNode) {
@@ -935,16 +940,10 @@ Renderer.prototype.image = function(href, title, alt) {
 };
 
 Renderer.prototype.text = function(childNode) {
-  return new TextNode(childNode);
+  return {
+    text: childNode
+  };
 };
-
-// Auxiliary object constructors:
-function TextNode(text, marks) {
-  this.text = text;
-  if (marks) {
-    this.marks = [marks];
-  }
-}
 
 /**
  * Parsing & Compiling
