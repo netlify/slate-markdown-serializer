@@ -55,7 +55,7 @@ var block = {
   heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n|$)/,
   nptable: noop,
   lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n|$)/,
-  blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*(?:\n|$))+/,
+  blockquote: /^( *>[^\n]+(\n(?!def)[^\n])*(?:\n|$))+/,
   list: /^( *)(bull) [\s\S]+?(?:hr|def|\n(?! )(?!\1bull )\n|\s*$)/,
   def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n|$)/,
   paragraph: /^((?:[^\n]+(?!hr|heading|lheading|blockquote|def))+)(?:\n|$)/,
@@ -1141,8 +1141,10 @@ function replace(regex, options) {
 const MarkdownParser = {
   parse(src, options) {
     options = assign({}, defaults, options);
+    let fragment;
+
     try {
-      var fragment = Parser.parse(Lexer.parse(src, options), options);
+      fragment = Parser.parse(Lexer.parse(src, options), options);
     } catch (e) {
       if (options.silent) {
         fragment = [
@@ -1168,8 +1170,8 @@ const MarkdownParser = {
         throw e;
       }
     }
-    let mainNode = { nodes: fragment };
-    return mainNode;
+
+    return { nodes: fragment };
   }
 };
 

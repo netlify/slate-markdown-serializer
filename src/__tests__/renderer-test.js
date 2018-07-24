@@ -129,6 +129,14 @@ test("parses quote", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("parses quote followed by list with quote (outline/#723)", () => {
+  const text = `
+> this is a quote
+1. > this is a list item
+`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("quotes do not get combined", () => {
   const text = `
 > this is a quote
