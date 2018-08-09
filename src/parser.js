@@ -1145,21 +1145,50 @@ const MarkdownParser = {
 
     try {
       fragment = Parser.parse(Lexer.parse(src, options), options);
-    } catch (e) {
-      if (options.silent) {
+
+      if (!fragment.length) {
         fragment = [
           {
             object: "block",
             type: "paragraph",
+            isVoid: false,
+            data: {},
             nodes: [
               {
                 object: "text",
                 leaves: [
                   {
-                    text: "An error occured:"
+                    object: "leaf",
+                    text: "",
+                    marks: []
+                  }
+                ]
+              }
+            ]
+          }
+        ];
+      }
+    } catch (err) {
+      if (options.silent) {
+        fragment = [
+          {
+            object: "block",
+            type: "paragraph",
+            isVoid: false,
+            data: {},
+            nodes: [
+              {
+                object: "text",
+                leaves: [
+                  {
+                    object: "leaf",
+                    text: "An error occured:",
+                    marks: []
                   },
                   {
-                    text: e.message
+                    object: "leaf",
+                    text: e.message,
+                    marks: []
                   }
                 ]
               }
@@ -1167,7 +1196,7 @@ const MarkdownParser = {
           }
         ];
       } else {
-        throw e;
+        throw err;
       }
     }
 

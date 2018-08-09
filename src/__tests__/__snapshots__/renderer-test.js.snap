@@ -894,7 +894,28 @@ Array [
 ]
 `;
 
-exports[`parses empty string 1`] = `Array []`;
+exports[`parses empty string 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "line",
+  },
+]
+`;
 
 exports[`parses heading1 1`] = `
 Array [
@@ -2797,7 +2818,28 @@ Array [
 ]
 `;
 
-exports[`parses whitespace string 1`] = `Array []`;
+exports[`parses whitespace string 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "line",
+  },
+]
+`;
 
 exports[`quote is not greedy about newlines 1`] = `
 Array [
