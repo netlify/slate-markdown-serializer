@@ -17,7 +17,7 @@
   },
   "peerDependencies": {
     "immutable": ">=3.0.0",
-    "slate": ">=0.34.0"
+    "slate": "~0.34.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
