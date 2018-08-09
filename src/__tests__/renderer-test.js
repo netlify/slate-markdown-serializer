@@ -122,6 +122,13 @@ test("code mark with escaped characters", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("does not escape characters inside of code marks", () => {
+  const text = "`<script>alert('foo')</script>`";
+  const parsed = Markdown.deserialize(text);
+  const rendered = Markdown.serialize(parsed);
+  expect(rendered).toMatchSnapshot();
+});
+
 test("parses quote", () => {
   const text = `
 > this is a quote
@@ -304,6 +311,20 @@ function() {
 \`\`\`
 `;
   expect(getNodes(text)).toMatchSnapshot();
+});
+
+test("does not escape characters inside of code blocks", () => {
+  const text = `
+\`\`\`
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`
+`;
+  const parsed = Markdown.deserialize(text);
+  const rendered = Markdown.serialize(parsed);
+  expect(rendered).toMatchSnapshot();
 });
 
 test("code is not greedy about newlines", () => {

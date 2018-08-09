@@ -307,6 +307,17 @@ Array [
 ]
 `;
 
+exports[`does not escape characters inside of code blocks 1`] = `
+"\`\`\`
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`"
+`;
+
+exports[`does not escape characters inside of code marks 1`] = `"\`<script>alert('foo')</script>\`"`;
+
 exports[`handles escaped blocks 1`] = `
 Array [
   Object {

@@ -195,9 +195,10 @@ class Markdown {
   serializeNode(node, document) {
     if (node.object == "text") {
       const leaves = node.getLeaves();
-      const inCodeBlock = !!document.getClosest(node.key, n => {
-        n.type === "code";
-      });
+      const inCodeBlock = !!document.getClosest(
+        node.key,
+        n => n.type === "code"
+      );
 
       return leaves.map(leave => {
         const inCodeMark = !!leave.marks.filter(mark => mark.type === "code")
