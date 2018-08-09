@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/tommoor/slate-md-serializer.svg?style=svg)](https://circleci.com/gh/tommoor/slate-md-serializer)
+[![npm version](https://badge.fury.io/js/slate-md-serializer.svg)](https://badge.fury.io/js/slate-md-serializer) [![CircleCI](https://circleci.com/gh/tommoor/slate-md-serializer.svg?style=svg)](https://circleci.com/gh/tommoor/slate-md-serializer)
 
 # Slate Markdown Serializer
 
