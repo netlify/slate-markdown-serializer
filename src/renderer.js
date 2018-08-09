@@ -104,8 +104,6 @@ const RULES = [
           return `\n##### ${children}\n`;
         case "heading6":
           return `\n###### ${children}\n`;
-        case "heading6":
-          return `\n###### ${children}\n`;
         case "horizontal-rule":
           return `---`;
         case "image":

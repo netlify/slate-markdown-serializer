@@ -912,7 +912,7 @@ Array [
       },
     ],
     "object": "block",
-    "type": "line",
+    "type": "paragraph",
   },
 ]
 `;
@@ -2836,7 +2836,7 @@ Array [
       },
     ],
     "object": "block",
-    "type": "line",
+    "type": "paragraph",
   },
 ]
 `;
