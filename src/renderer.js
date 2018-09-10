@@ -127,6 +127,8 @@ const RULES = [
   {
     serialize(obj, children) {
       if (obj.object !== "mark") return;
+      if (!children) return;
+
       switch (obj.type) {
         case "bold":
           return `**${children}**`;
