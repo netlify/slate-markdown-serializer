@@ -1,0 +1,3207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bold mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "bold",
+              },
+            ],
+            "object": "leaf",
+            "text": "this is bold",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`code is not greedy about newlines 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "one sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "two sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`code mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "code",
+              },
+            ],
+            "object": "leaf",
+            "text": "const foo = 123;",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`code mark with escaped characters 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "code",
+              },
+            ],
+            "object": "leaf",
+            "text": "<script>alert('foo')</script>",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`deleted mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "deleted",
+              },
+            ],
+            "object": "leaf",
+            "text": "this is strikethrough",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`does not add extra paragraphs around lists 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "first paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "list",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "second paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`does not escape characters inside of code blocks 1`] = `
+"\`\`\`
+const hello = 'world';
+function() {
+  return hello;
+}
+\`\`\`"
+`;
+
+exports[`does not escape characters inside of code marks 1`] = `"\`<script>alert('foo')</script>\`"`;
+
+exports[`handles escaped blocks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "# text",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped blocks 2`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "- text",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped blocks 3`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "* text",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is **not bold**",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped marks 2`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is *not italic*",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped marks 3`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is [not](a link)",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`handles escaped marks 4`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is ![not](an image)",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`headings are not greedy about newlines 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "a paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading2",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "another paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`ignores empty link 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "empty",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`inserted mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "inserted",
+              },
+            ],
+            "object": "leaf",
+            "text": "inserted text",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`italic mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "italic",
+              },
+            ],
+            "object": "leaf",
+            "text": "this is italic",
+          },
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": " ",
+          },
+          Object {
+            "marks": Array [
+              Object {
+                "data": Object {},
+                "object": "mark",
+                "type": "italic",
+              },
+            ],
+            "object": "leaf",
+            "text": "this is italic too",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`maintains multiple empty paragraphs 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is the first sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Two empty paragraphs above",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses \`\`\` code fences 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses ~~~ code fences 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses double nested todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "checked",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "empty",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": true,
+                },
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "checked",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+            ],
+            "object": "block",
+            "type": "todo-list",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "todo-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "three",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses empty string 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses hashtag 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a ",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "#hashtag",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "hashtag",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": " example",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses heading1 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading1",
+  },
+]
+`;
+
+exports[`parses heading2 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading2",
+  },
+]
+`;
+
+exports[`parses heading3 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading3",
+  },
+]
+`;
+
+exports[`parses heading4 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading4",
+  },
+]
+`;
+
+exports[`parses heading5 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading5",
+  },
+]
+`;
+
+exports[`parses heading6 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "Heading",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "heading6",
+  },
+]
+`;
+
+exports[`parses horizontal rule 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": true,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "horizontal-rule",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "a paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses image 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "alt": "example",
+          "src": "http://example.com/logo.png",
+        },
+        "isVoid": true,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "block",
+        "type": "image",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses indented code blocks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "const hello = 'world';
+function() {
+  return hello;
+}",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "code",
+  },
+]
+`;
+
+exports[`parses indented list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses link 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "google",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "link",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link with encoded characters 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/discover?_g=(refreshInterval:('$$hashKey':'object:1596',display:'10 seconds',pause:!f,section:1,value:10000),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(metadata.step,message,metadata.attempt_f,metadata.tries_f,metadata.error_class,metadata.url),index:'logs-',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'metadata.at: Stepper*')),sort:!(time,desc))",
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "kibana",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "link",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link with percent symbol 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {
+          "href": "https://example.com/app/kibana#/visualize/edit/Requests-%25",
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "kibana",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "link",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses link within mark 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+      Object {
+        "data": Object {
+          "href": "http://google.com",
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "leaves": Array [
+              Object {
+                "marks": Array [],
+                "object": "leaf",
+                "text": "google",
+              },
+            ],
+            "object": "text",
+          },
+        ],
+        "object": "inline",
+        "type": "link",
+      },
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one ",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "bold",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "italic",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "italic",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": " two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+]
+`;
+
+exports[`parses mixed list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "list",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "another",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "different",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses nested list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {},
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "nested",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+            ],
+            "object": "block",
+            "type": "bulleted-list",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "bulleted-list",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "next para",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses nested todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "todo",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "nested",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+              Object {
+                "data": Object {
+                  "checked": false,
+                },
+                "isVoid": false,
+                "nodes": Array [
+                  Object {
+                    "data": Object {},
+                    "isVoid": false,
+                    "nodes": Array [
+                      Object {
+                        "leaves": Array [
+                          Object {
+                            "marks": Array [],
+                            "object": "leaf",
+                            "text": "deep",
+                          },
+                        ],
+                        "object": "text",
+                      },
+                    ],
+                    "object": "block",
+                    "type": "paragraph",
+                  },
+                ],
+                "object": "block",
+                "type": "list-item",
+              },
+            ],
+            "object": "block",
+            "type": "todo-list",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses ordered list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with different numbers 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "three",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses ordered list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "one ",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "bold",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "italic",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "italic",
+                  },
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": " two",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses paragraph 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is just a sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses quote 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`parses quote followed by list with quote (outline/#723) 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "this is a list item",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "block-quote",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "ordered-list",
+  },
+]
+`;
+
+exports[`parses tables 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Tables",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Are",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Cool",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "col 1 is",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "left-aligned",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "$1600",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "col 2 is",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "centered",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "$12",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "col 3 is",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "right-aligned",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "$1",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+    ],
+    "object": "block",
+    "type": "table",
+  },
+]
+`;
+
+exports[`parses todo list items 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": false,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "todo",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "done",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses todo list items with marks 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "deleted",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "done",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+      Object {
+        "data": Object {
+          "checked": true,
+        },
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {},
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "more ",
+                  },
+                  Object {
+                    "marks": Array [
+                      Object {
+                        "data": Object {},
+                        "object": "mark",
+                        "type": "bold",
+                      },
+                    ],
+                    "object": "leaf",
+                    "text": "done",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "paragraph",
+          },
+        ],
+        "object": "block",
+        "type": "list-item",
+      },
+    ],
+    "object": "block",
+    "type": "todo-list",
+  },
+]
+`;
+
+exports[`parses two paragraphs 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is the first sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is the second sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses two paragraphs 2`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is the first sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "This is the second sentance",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`parses whitespace string 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`quote is not greedy about newlines 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;
+
+exports[`quotes do not get combined 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "this is a different quote",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "block-quote",
+  },
+]
+`;
+
+exports[`tables are not greedy about newlines 1`] = `
+Array [
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Tables",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Are",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "Cool",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-head",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+      Object {
+        "data": Object {},
+        "isVoid": false,
+        "nodes": Array [
+          Object {
+            "data": Object {
+              "align": null,
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "col 1 is",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "center",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "left-aligned",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+          Object {
+            "data": Object {
+              "align": "right",
+            },
+            "isVoid": false,
+            "nodes": Array [
+              Object {
+                "leaves": Array [
+                  Object {
+                    "marks": Array [],
+                    "object": "leaf",
+                    "text": "$1600",
+                  },
+                ],
+                "object": "text",
+              },
+            ],
+            "object": "block",
+            "type": "table-cell",
+          },
+        ],
+        "object": "block",
+        "type": "table-row",
+      },
+    ],
+    "object": "block",
+    "type": "table",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+  Object {
+    "data": Object {},
+    "isVoid": false,
+    "nodes": Array [
+      Object {
+        "leaves": Array [
+          Object {
+            "marks": Array [],
+            "object": "leaf",
+            "text": "a new paragraph",
+          },
+        ],
+        "object": "text",
+      },
+    ],
+    "object": "block",
+    "type": "paragraph",
+  },
+]
+`;

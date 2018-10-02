@@ -1,0 +1,27 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8-stretch
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-{{ .Branch }}
+            - yarn-master
+            - yarn-
+
+      - run:
+          name: Install all JS packages
+          command: yarn install --pure-lockfile
+
+      - save_cache:
+          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - ~/.cache/yarn
+
+      - run: yarn test
