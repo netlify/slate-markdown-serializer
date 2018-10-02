@@ -116,7 +116,10 @@ const RULES = [
   {
     serialize(obj, children) {
       if (obj.object !== "inline") return;
+
       switch (obj.type) {
+        case "hashtag":
+          return children;
         case "link":
           const href = encode(obj.getIn(["data", "href"]) || "");
           return href ? `[${children.trim()}](${href})` : children.trim();
@@ -232,7 +235,8 @@ class Markdown {
     let leavesText = leaves.text;
     if (escape) {
       // escape markdown characters
-      leavesText = leavesText.replace(/([\\`*{}\[\]()#+\-.!_>])/gi, "\\$1");
+      leavesText = leavesText.replace(/([\\`*{}\[\]()+\-.!_>])/gi, "\\$1");
+      leavesText = leavesText.replace(/(#\s)/gi, "\\$1");
     }
     const string = new String({ text: leavesText });
     const text = this.serializeString(string);

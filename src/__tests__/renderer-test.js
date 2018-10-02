@@ -365,6 +365,11 @@ test("parses indented code blocks", () => {
   expect(getNodes(text)).toMatchSnapshot();
 });
 
+test("parses hashtag", () => {
+  const text = `this is a #hashtag example`;
+  expect(getNodes(text)).toMatchSnapshot();
+});
+
 test("parses image", () => {
   const text = `![example](http://example.com/logo.png)`;
   expect(getNodes(text)).toMatchSnapshot();

@@ -475,6 +475,7 @@ Lexer.prototype.token = function(src, top, bq) {
 var inline = {
   escape: /^\\([\\`*{}\[\]()#+\-.!_>])/,
   link: /^!?\[(inside)\]\(href\)/,
+  hashtag: /^(#(?:\[[^\]]+\]|\S+))/,
   reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
   nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
   strong: /^__([\s\S]+?)__(?!_)|^\*\*([\s\S]+?)\*\*(?!\*)/,
@@ -483,7 +484,7 @@ var inline = {
   br: /^ {2,}\n(?!\s*$)/,
   del: noop,
   ins: noop,
-  text: /^[\s\S]+?(?=[\\<!\[_*`]| {2,}\n|$)/
+  text: /^[\s\S]+?(?=[\\<!\[_*#`]| {2,}\n|$)/
 };
 
 inline._inside = /(?:\[[^\]]*\]|[^\[\]]|\](?=[^\[]*\]))*/;
@@ -599,9 +600,14 @@ InlineLexer.prototype.parse = function(src) {
     // link
     if ((cap = this.rules.link.exec(src))) {
       src = src.substring(cap[0].length);
-      this.inLink = true;
       out.push(this.outputLink(cap, { href: cap[2], title: cap[3] }));
-      this.inLink = false;
+      continue;
+    }
+
+    // hashtag
+    if ((cap = this.rules.hashtag.exec(src))) {
+      src = src.substring(cap[0].length);
+      out.push(this.renderer.hashtag(cap[1]));
       continue;
     }
 
@@ -626,9 +632,7 @@ InlineLexer.prototype.parse = function(src) {
         src = cap[0].substring(1) + src;
         continue;
       }
-      this.inLink = true;
       out.push(this.outputLink(cap, link));
-      this.inLink = false;
       continue;
     }
 
@@ -701,7 +705,6 @@ InlineLexer.prototype.outputLink = function(cap, link) {
     ? this.renderer.link(href, title, this.parse(cap[1]))
     : this.renderer.image(href, title, cap[1]);
 };
-``;
 
 /**
  * Renderer
@@ -894,6 +897,19 @@ Renderer.prototype.ins = function(childNode) {
   });
 };
 
+Renderer.prototype.hashtag = function(childNode) {
+  return {
+    object: "inline",
+    type: "hashtag",
+    nodes: [
+      {
+        object: "text",
+        leaves: [{ text: childNode }]
+      }
+    ]
+  };
+};
+
 Renderer.prototype.link = function(href, title, childNode) {
   var data = {
     href: decode(href)
@@ -927,11 +943,7 @@ Renderer.prototype.image = function(href, title, alt) {
     nodes: [
       {
         object: "text",
-        leaves: [
-          {
-            text: ""
-          }
-        ]
+        leaves: [{ text: "" }]
       }
     ],
     isVoid: true,
